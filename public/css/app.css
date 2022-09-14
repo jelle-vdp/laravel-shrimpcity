@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: "Pettingill";
+  src: url("/assets/fonts/PettingillCF-Bold.otf");
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4;
+}
+
+fieldset {
+  border: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+button, input:not([type="file"]), textarea, select {
+  padding: 0.5rem 0.8rem;
+}
+
+button {
+  background-color: #EE6123;
+  font-size: 1.4rem;
+  color: #0B3954;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: #ce4a10;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #BFD7EA;
+  overflow-x: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1380px) {
+  .container {
+    max-width: calc(1280px - 2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: calc(100vw - 40px);
+  }
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header {
+  background-color: #0B3954;
+  color: #BFD7EA;
+  padding: 3rem 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  font-family: "Pettingill";
+  font-size: 3rem;
+  line-height: normal;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+header .logo span {
+  font-family: "Pettingill";
+  position: absolute;
+  top: 1.9rem;
+  left: 50%;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+header nav ul a {
+  color: #BFD7EA;
+  text-decoration: none;
+}
+
+header nav ul a:hover {
+  color: #99bfdd;
+}
+
+.homepage {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homepage > h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.tns-outer {
+  position: relative;
+  margin-bottom: 4rem;
+  overflow: auto !important;
+}
+
+.tns-outer .tns-controls {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tns-outer .tns-ovh {
+  overflow: visible !important;
+  overflow-x: hidden !important;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide {
+  aspect-ratio: 16/5;
+  height: 100%;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__image {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: contrast(0.8);
+          filter: contrast(0.8);
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information {
+  position: absolute;
+  bottom: -4rem;
+  right: 4rem;
+  width: 500px;
+  padding: 1rem;
+  background-color: #EE6123;
+  color: #0B3954;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9;
+  border: 1px dashed #0B3954;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date {
+  position: absolute;
+  font-weight: 800;
+  padding: 0.5rem;
+  border: 1px dashed #0B3954;
+  border-right: 0;
+  top: -1px;
+  right: calc(100% + 1px);
+  font-size: 1.4rem;
+  background-color: #EE6123;
+  color: #0B3954;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span {
+  display: inline;
+  text-align: center;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span:not(:last-child) {
+  position: relative;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 0.25rem;
+  width: 2rem;
+  background-color: #0B3954;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 span {
+  font-family: "Pettingill";
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 span {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn {
+  width: 100%;
+  height: 3rem;
+  background-color: #0B3954;
+  color: #BFD7EA;
+  text-transform: uppercase;
+  font-family: "Pettingill";
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn:hover {
+  background-color: #082a3d;
+}
+
+.gigs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border: 1px solid #0B3954;
+}
+
+.gigs a {
+  color: #0B3954;
+  text-decoration: none;
+  background-color: #BFD7EA;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs a:not(:last-child) {
+  border-bottom: 1px solid #0B3954;
+}
+
+.gigs a:hover {
+  background-color: #99bfdd;
+}
+
+.gigs a:hover article .gig__info .gig__date > span:not(:last-child)::after {
+  right: 1.5rem;
+}
+
+.gigs a:hover article img {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+.gigs a article {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gigs a article img {
+  max-width: 200px;
+  height: auto;
+  border-right: 1px solid #0B3954;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs a article .gig__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gigs a article .gig__info .gig__date {
+  padding: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #0B3954;
+}
+
+.gigs a article .gig__info .gig__date > span {
+  font-size: 3rem;
+  font-weight: 800;
+  display: inline;
+  margin-right: auto;
+}
+
+.gigs a article .gig__info .gig__date > span:not(:last-child) {
+  position: relative;
+}
+
+.gigs a article .gig__info .gig__date > span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  right: -0.5rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 0.5rem;
+  height: 2rem;
+  background-color: #0B3954;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs a article .gig__info .gig__date .gig__month {
+  margin-left: 2rem;
+}
+
+.gigs a article .gig__info .gig__date .gig__year {
+  margin-left: 4rem;
+}
+
+.gigs a article .gig__info .gig__bands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.gigs a article .gig__info .gig__bands .gig__headliner {
+  font-size: 5rem;
+  line-height: 1;
+  font-family: "Pettingill";
+}
+
+.gigs a article .gig__info .gig__bands .gig__headliner span {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-family: "Pettingill";
+}
+
+.gigs a article .gig__info .gig__bands .gig__support {
+  font-size: 2.5rem;
+  font-family: "Pettingill";
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: #0B3954;
+  color: #BFD7EA;
+}
+/*# sourceMappingURL=app.css.map */
