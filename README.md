@@ -1,3 +1,3 @@
-# Shrimptown
+# Shrimpcity
 
-Laravel website for concert venue Shrimptown
+Laravel website for concert venue Shrimpcity
