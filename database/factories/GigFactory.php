@@ -35,9 +35,9 @@ class GigFactory extends Factory
             'description' => $this->faker->paragraph(),
             'slug' => strtolower($headlinerFirst),
             'tags' => 'Shrimp',
-            'venue' => "Shrimptown",
+            'venue' => "Shrimpcity",
             'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 60),
-            'logo-url' => 'https://picsum.photos/id/' . rand(1, 250) .  '/2000/2000'
+            'logo-url' => 'https://picsum.photos/id/' . rand(1, 200) .  '/2000/2000'
         ];
     }
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shrimptown</title>
+    <title>Shrimpcity</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script type="module">
@@ -22,13 +23,13 @@
 <body>
     <header>
         <div class="container">
-            <span class="logo">Shrimp<span>town</span></span>
+            <span class="logo">Shrimp<span>city</span></span>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/gigs">Gigs</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/"><span>Home</span></a></li>
+                    <li><a href="/shows"><span>Shows</span></a></li>
+                    <li><a href="/about"><span>About</span></a></li>
+                    <li><a href="/contact"><span>Contact</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +39,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; {{date("Y")}} Shrimptown</p>
+            <p>&copy; {{date("Y")}} Shrimpcity</p>
         </div>
     </footer>
 </body>

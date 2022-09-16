@@ -11,6 +11,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.4;
+  color: #0B3954;
 }
 
 fieldset {
@@ -96,7 +97,8 @@ main {
 header {
   background-color: #0B3954;
   color: #BFD7EA;
-  padding: 3rem 0;
+  border-top: 1px dashed #BFD7EA;
+  border-bottom: 1px dashed #BFD7EA;
 }
 
 header .container {
@@ -113,14 +115,18 @@ header .logo {
   font-size: 3rem;
   line-height: normal;
   position: relative;
+  color: #BFD7EA;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   margin-bottom: 1.5rem;
 }
 
 header .logo span {
   font-family: "Pettingill";
   position: absolute;
-  top: 1.9rem;
+  top: 5.2rem;
   left: 50%;
+  color: #BFD7EA;
 }
 
 header nav {
@@ -130,6 +136,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 header nav ul {
@@ -140,29 +147,60 @@ header nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
-header nav ul li:not(:last-child) {
-  margin-right: 1rem;
+header nav ul li {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav ul a {
-  color: #BFD7EA;
+header nav ul li:first-child a {
+  border-left: 1px dashed #BFD7EA;
+}
+
+header nav ul li a {
   text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0 3rem;
+  height: 140%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-right: 1px dashed #BFD7EA;
+  overflow: hidden;
 }
 
-header nav ul a:hover {
-  color: #99bfdd;
+header nav ul li a span {
+  color: #BFD7EA;
 }
 
-.homepage {
+header nav ul li a:hover {
+  background-color: #115881;
+}
+
+main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.homepage > h2 {
+main h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -205,6 +243,7 @@ header nav ul a:hover {
   height: 100%;
   -webkit-filter: contrast(0.8);
           filter: contrast(0.8);
+  background-position: center center;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information {
@@ -254,38 +293,25 @@ header nav ul a:hover {
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span:not(:last-child) {
   position: relative;
+  border-bottom: 1px dashed #0B3954;
 }
 
-.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: -0.2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  height: 0.25rem;
-  width: 2rem;
-  background-color: #0B3954;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 span {
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h4, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 span {
   font-family: "Pettingill";
 }
 
-.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 {
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 {
   font-size: 3rem;
   margin-bottom: 0;
   line-height: 1;
 }
 
-.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h2 span {
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 span {
   font-size: 1rem;
   margin-left: 0.5rem;
 }
 
-.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 {
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -296,11 +322,260 @@ header nav ul a:hover {
   background-color: #0B3954;
   color: #BFD7EA;
   text-transform: uppercase;
-  font-family: "Pettingill";
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn:hover {
   background-color: #082a3d;
+}
+
+.news-recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.news-recent h2 {
+  margin-bottom: 2rem;
+}
+
+.news-recent__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.news-recent__wrapper .news-recent__link {
+  border: 1px dashed #BFD7EA;
+  background-color: #0B3954;
+  display: block;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.news-recent__wrapper .news-recent__link * {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.news-recent__wrapper .news-recent__link:hover {
+  background-color: #082a3d;
+}
+
+.news-recent__wrapper .news-recent__link:hover .news-recent__read-more {
+  margin-left: 1rem;
+}
+
+.news-recent__wrapper .news-recent__link:hover img {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.news-recent__wrapper .news-recent__link article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.news-recent__wrapper .news-recent__link article img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-bottom: 1px dashed #BFD7EA;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__title-wrapper {
+  padding: 2rem 1rem;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__title-wrapper h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #BFD7EA;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__title-wrapper .news-recent__read-more {
+  color: #BFD7EA;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__title-wrapper .news-recent__read-more i {
+  margin: 0 0.5rem 0 0.3rem;
+  color: #BFD7EA;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__date {
+  font-size: 1.4rem;
+  margin-top: auto;
+  border-top: 1px dashed #BFD7EA;
+  background-color: #0B3954;
+}
+
+.news-recent__wrapper .news-recent__link article .news-recent__date span {
+  color: #BFD7EA;
+  padding: 1rem;
+  border-right: 1px dashed #BFD7EA;
+  display: inline-block;
+}
+
+.gigs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.gigs-container .gigs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border: 1px dashed #0B3954;
+}
+
+.gigs-container .gigs a {
+  color: #0B3954;
+  text-decoration: none;
+  background-color: #BFD7EA;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs-container .gigs a:not(:last-child) {
+  border-bottom: 1px dashed #0B3954;
+}
+
+.gigs-container .gigs a:hover {
+  background-color: #99bfdd;
+}
+
+.gigs-container .gigs a:hover article .gig__info .gig__date > span:not(:last-child)::after {
+  right: 1.5rem;
+}
+
+.gigs-container .gigs a:hover article img {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+.gigs-container .gigs a article {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gigs-container .gigs a article img {
+  max-width: 200px;
+  height: auto;
+  border-right: 1px dashed #0B3954;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs-container .gigs a article .gig__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date {
+  padding: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px dashed #0B3954;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date > span {
+  font-size: 3rem;
+  font-weight: 800;
+  display: inline;
+  margin-right: auto;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date > span:not(:last-child) {
+  position: relative;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date > span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  right: -0.5rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 0.5rem;
+  height: 2rem;
+  background-color: #0B3954;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date .gig__month {
+  margin-left: 2rem;
+}
+
+.gigs-container .gigs a article .gig__info .gig__date .gig__year {
+  margin-left: 4rem;
+}
+
+.gigs-container .gigs a article .gig__info .gig__bands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.gigs-container .gigs a article .gig__info .gig__bands .gig__headliner {
+  font-size: 5rem;
+  line-height: 1;
+  font-family: "Pettingill";
+}
+
+.gigs-container .gigs a article .gig__info .gig__bands .gig__headliner span {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-family: "Pettingill";
+}
+
+.gigs-container .gigs a article .gig__info .gig__bands .gig__support {
+  font-size: 2.5rem;
+  font-family: "Pettingill";
 }
 
 .gigs {
@@ -312,7 +587,8 @@ header nav ul a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  border: 1px solid #0B3954;
+  border: 1px dashed #0B3954;
+  margin-bottom: 2rem;
 }
 
 .gigs a {
@@ -324,7 +600,7 @@ header nav ul a:hover {
 }
 
 .gigs a:not(:last-child) {
-  border-bottom: 1px solid #0B3954;
+  border-bottom: 1px dashed #0B3954;
 }
 
 .gigs a:hover {
@@ -351,7 +627,7 @@ header nav ul a:hover {
 .gigs a article img {
   max-width: 200px;
   height: auto;
-  border-right: 1px solid #0B3954;
+  border-right: 1px dashed #0B3954;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -374,7 +650,7 @@ header nav ul a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: 1px solid #0B3954;
+  border-right: 1px dashed #0B3954;
 }
 
 .gigs a article .gig__info .gig__date > span {

@@ -1,6 +1,7 @@
 @component('layout')
     @include('partials._hero')
-    <div class="container homepage">
+    @include('partials._recent-news')
+    <section class="container gigs-container">
         <h2>Upcoming gigs</h2>
         @unless (count($gigs) === 0)
         <section class="gigs"> 
@@ -15,8 +16,8 @@
                                 <span class="gig__year">{{ date_format(date_create($gig['date']), 'Y') }}</span>
                             </div>
                             <div class="gig__bands">
-                                <h2 class="gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
-                                <h3 class="gig__support">+ {{ $gig['first_support_band'] }}</h3>
+                                <h3 class="gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
+                                <h4 class="gig__support">+ {{ $gig['first_support_band'] }}</h3>
                             </div>
                         </div>
                     </article>
@@ -29,5 +30,5 @@
         <p>No gigs available.</p>
             
         @endunless
-    </div>
+    </section>
 @endcomponent

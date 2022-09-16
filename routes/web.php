@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\Gig;
+use App\Models\News;
+use Illuminate\Support\Facades\Route;
 use League\Flysystem\DirectoryListing;
 
 /*
@@ -16,8 +17,11 @@ use League\Flysystem\DirectoryListing;
 */
 
 Route::get('/', function () {
+    $gigs = Gig::all();
+    $news = News::all();
     return view('gigs.index', [
-        'gigs' => Gig::all()
+        'gigs' => $gigs->sortBy('date')->take(10),
+        'news' => $news->sortByDesc('fake_date')->take(3)
     ]);
 });
 
