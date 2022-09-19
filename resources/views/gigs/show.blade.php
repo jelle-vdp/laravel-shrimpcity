@@ -25,10 +25,10 @@
                                 <p class="single-gig__timing"><span>21h00:</span> <span>{{ $gig['headliner_one'] }}</span></p>
                             </div>
                             <p class="single-gig__explanation">Tickets</p>
-                            <p class="single-gig__ticket-prices">
-                                <span>€{{ $gig['price'] - 2 }}<span class="single-gig__ticket-type">/ Pre-sale</span></span>
-                                <span>€{{ $gig['price'] }}<span class="single-gig__ticket-type">/ At the door</span></span>
-                            </p>
+                            <div class="single-gig__ticket-prices">
+                                <p>€{{ $gig['price'] - 2 }}<span class="single-gig__ticket-type">/ Pre-sale</span></p>
+                                <p>€{{ $gig['price'] }}<span class="single-gig__ticket-type">/ At the door</span></p>
+                            </div>
                         </div>
                         <div class="single-gig__ticket-button-wrapper">
                             <button><i class="fa-solid fa-ticket"></i> Buy tickets</button>
@@ -39,9 +39,32 @@
         </div>
 
         <div class="single-gig__description container">
-            @foreach ($gig_description as $description)
-                <p>{!! $description !!}</p>
-            @endforeach
+            <section>
+                <header>
+                    <h2>{{ $gig['headliner_one'] }}</h2>
+                    <div class="single-gig__social-media-wrapper">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </header>
+                @foreach ($description_headliner as $description)
+                    <p>{!! $description !!}</p>
+                @endforeach
+            </section>
+            <section>
+                <header>
+                    <h2>{{ $gig['first_support_band'] }}</h2>
+                    <div class="single-gig__social-media-wrapper">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </header>
+                @foreach ($description_support as $description)
+                    <p>{!! $description !!}</p>
+                @endforeach
+            </section>
         </div>
     </section>
 @endcomponent

@@ -11,7 +11,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.4;
-  color: #0B3954;
+  color: #0A3140;
 }
 
 fieldset {
@@ -32,16 +32,16 @@ button, input:not([type="file"]), textarea, select {
 }
 
 button {
-  background-color: #EE6123;
+  background-color: #679436;
   font-size: 1.4rem;
-  color: #0B3954;
+  color: #0A3140;
   position: relative;
   text-transform: uppercase;
   font-weight: 800;
 }
 
 button:hover {
-  background-color: #ce4a10;
+  background-color: #81b944;
 }
 
 .link {
@@ -62,7 +62,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-color: #BFD7EA;
+  background-color: #EBF2FA;
   overflow-x: hidden;
 }
 
@@ -94,15 +94,15 @@ main {
           flex: 1;
 }
 
-header {
-  background-color: #0B3954;
-  color: #BFD7EA;
-  border-top: 1px dashed #BFD7EA;
-  border-bottom: 1px dashed #BFD7EA;
+header.nav-header {
+  background-color: #0A3140;
+  color: #EBF2FA;
+  border-top: 1px dashed #EBF2FA;
+  border-bottom: 1px dashed #EBF2FA;
   width: 100vw;
 }
 
-header .container {
+header.nav-header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,26 +111,26 @@ header .container {
           justify-content: space-between;
 }
 
-header .logo {
+header.nav-header .logo {
   font-family: "Pettingill";
   font-size: 3rem;
   line-height: normal;
   position: relative;
-  color: #BFD7EA;
+  color: #EBF2FA;
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 1.5rem;
 }
 
-header .logo span {
+header.nav-header .logo span {
   font-family: "Pettingill";
   position: absolute;
   top: 5.2rem;
   left: 50%;
-  color: #BFD7EA;
+  color: #EBF2FA;
 }
 
-header nav {
+header.nav-header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,7 +140,7 @@ header nav {
   overflow: hidden;
 }
 
-header nav ul {
+header.nav-header nav ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,7 +151,7 @@ header nav ul {
   height: 100%;
 }
 
-header nav ul li {
+header.nav-header nav ul li {
   position: relative;
   height: 100%;
   display: -webkit-box;
@@ -162,11 +162,11 @@ header nav ul li {
           align-items: center;
 }
 
-header nav ul li:first-child a {
-  border-left: 1px dashed #BFD7EA;
+header.nav-header nav ul li:first-child a {
+  border-left: 1px dashed #EBF2FA;
 }
 
-header nav ul li a {
+header.nav-header nav ul li a {
   text-decoration: none;
   font-size: 1.4rem;
   padding: 0 3rem;
@@ -182,16 +182,16 @@ header nav ul li a {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  border-right: 1px dashed #BFD7EA;
+  border-right: 1px dashed #EBF2FA;
   overflow: hidden;
 }
 
-header nav ul li a span {
-  color: #BFD7EA;
+header.nav-header nav ul li a span {
+  color: #EBF2FA;
 }
 
-header nav ul li a:hover {
-  background-color: #115881;
+header.nav-header nav ul li a:hover {
+  background-color: #11536c;
 }
 
 main {
@@ -199,11 +199,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-main h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
 }
 
 .tns-outer {
@@ -225,6 +220,18 @@ main h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.tns-outer .tns-controls button {
+  border: 1px dashed #0A3140;
+}
+
+.tns-outer .tns-controls button:first-child {
+  border-left: 0;
+}
+
+.tns-outer .tns-controls button:last-child {
+  border-right: 0;
 }
 
 .tns-outer .tns-ovh {
@@ -254,8 +261,8 @@ main h2 {
   right: 4rem;
   width: 500px;
   padding: 1rem;
-  background-color: #EE6123;
-  color: #0B3954;
+  background-color: #679436;
+  color: #0A3140;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,20 +271,20 @@ main h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 9;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date {
   position: absolute;
   font-weight: 800;
   padding: 0.5rem;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
   border-right: 0;
   top: -1px;
   right: calc(100% + 1px);
   font-size: 1.4rem;
-  background-color: #EE6123;
-  color: #0B3954;
+  background-color: #679436;
+  color: #0A3140;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,7 +302,7 @@ main h2 {
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information .recent-gigs-slider__date > span:not(:last-child) {
   position: relative;
-  border-bottom: 1px dashed #0B3954;
+  border-bottom: 1px dashed #0A3140;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h4, .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h3 span {
@@ -321,13 +328,13 @@ main h2 {
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn {
   width: 100%;
   height: 3rem;
-  background-color: #0B3954;
-  color: #BFD7EA;
+  background-color: #0A3140;
+  color: #EBF2FA;
   text-transform: uppercase;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn:hover {
-  background-color: #082a3d;
+  background-color: #07202a;
 }
 
 .news-recent {
@@ -342,6 +349,7 @@ main h2 {
 }
 
 .news-recent h2 {
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -354,8 +362,8 @@ main h2 {
 }
 
 .news-recent__wrapper .news-recent__link {
-  border: 1px dashed #BFD7EA;
-  background-color: #0B3954;
+  border: 1px dashed #EBF2FA;
+  background-color: #0A3140;
   display: block;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
@@ -367,7 +375,7 @@ main h2 {
 }
 
 .news-recent__wrapper .news-recent__link:hover {
-  background-color: #082a3d;
+  background-color: #07202a;
 }
 
 .news-recent__wrapper .news-recent__link:hover .news-recent__read-more {
@@ -394,7 +402,7 @@ main h2 {
   width: 100%;
   height: auto;
   aspect-ratio: 1/1;
-  border-bottom: 1px dashed #BFD7EA;
+  border-bottom: 1px dashed #EBF2FA;
 }
 
 .news-recent__wrapper .news-recent__link article .news-recent__title-wrapper {
@@ -405,29 +413,29 @@ main h2 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  color: #BFD7EA;
+  color: #EBF2FA;
 }
 
 .news-recent__wrapper .news-recent__link article .news-recent__title-wrapper .news-recent__read-more {
-  color: #BFD7EA;
+  color: #EBF2FA;
 }
 
 .news-recent__wrapper .news-recent__link article .news-recent__title-wrapper .news-recent__read-more i {
   margin: 0 0.5rem 0 0.3rem;
-  color: #BFD7EA;
+  color: #EBF2FA;
 }
 
 .news-recent__wrapper .news-recent__link article .news-recent__date {
   font-size: 1.4rem;
   margin-top: auto;
-  border-top: 1px dashed #BFD7EA;
-  background-color: #0B3954;
+  border-top: 1px dashed #EBF2FA;
+  background-color: #0A3140;
 }
 
 .news-recent__wrapper .news-recent__link article .news-recent__date span {
-  color: #BFD7EA;
+  color: #EBF2FA;
   padding: 1rem;
-  border-right: 1px dashed #BFD7EA;
+  border-right: 1px dashed #EBF2FA;
   display: inline-block;
 }
 
@@ -442,6 +450,11 @@ main h2 {
   margin-bottom: 4rem;
 }
 
+.gigs-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
 .gigs-container .gigs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,23 +464,23 @@ main h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
 }
 
 .gigs-container .gigs a {
-  color: #0B3954;
+  color: #0A3140;
   text-decoration: none;
-  background-color: #BFD7EA;
+  background-color: #EBF2FA;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .gigs-container .gigs a:not(:last-child) {
-  border-bottom: 1px dashed #0B3954;
+  border-bottom: 1px dashed #0A3140;
 }
 
 .gigs-container .gigs a:hover {
-  background-color: #99bfdd;
+  background-color: #c2d7f0;
 }
 
 .gigs-container .gigs a:hover article .gig__info .gig__date > span:not(:last-child)::after {
@@ -490,7 +503,7 @@ main h2 {
 .gigs-container .gigs a article .gig__image-wrapper {
   min-width: 200px;
   height: auto;
-  border-right: 1px dashed #0B3954;
+  border-right: 1px dashed #0A3140;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-position: center center;
@@ -515,7 +528,7 @@ main h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: 1px dashed #0B3954;
+  border-right: 1px dashed #0A3140;
 }
 
 .gigs-container .gigs a article .gig__info .gig__date > span {
@@ -538,7 +551,7 @@ main h2 {
           transform: rotate(90deg);
   width: 0.5rem;
   height: 2rem;
-  background-color: #0B3954;
+  background-color: #0A3140;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -591,24 +604,24 @@ main h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
   margin-bottom: 2rem;
 }
 
 .gigs a {
-  color: #0B3954;
+  color: #0A3140;
   text-decoration: none;
-  background-color: #BFD7EA;
+  background-color: #EBF2FA;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .gigs a:not(:last-child) {
-  border-bottom: 1px dashed #0B3954;
+  border-bottom: 1px dashed #0A3140;
 }
 
 .gigs a:hover {
-  background-color: #99bfdd;
+  background-color: #c2d7f0;
 }
 
 .gigs a:hover article .gig__info .gig__date > span:not(:last-child)::after {
@@ -631,7 +644,7 @@ main h2 {
 .gigs a article img {
   max-width: 200px;
   height: auto;
-  border-right: 1px dashed #0B3954;
+  border-right: 1px dashed #0A3140;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -654,7 +667,7 @@ main h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: 1px dashed #0B3954;
+  border-right: 1px dashed #0A3140;
 }
 
 .gigs a article .gig__info .gig__date > span {
@@ -677,7 +690,7 @@ main h2 {
           transform: rotate(90deg);
   width: 0.5rem;
   height: 2rem;
-  background-color: #0B3954;
+  background-color: #0A3140;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -773,16 +786,16 @@ main h2 {
   padding: 0.7rem;
   line-height: 1;
   font-family: "Pettingill";
-  background-color: #EE6123;
+  background-color: #679436;
   margin: 4rem 0 1rem 0;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__headliner span {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   font-family: "Pettingill";
-  background-color: #EE6123;
+  background-color: #679436;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__support {
@@ -790,9 +803,9 @@ main h2 {
   font-size: 2.5rem;
   font-family: "Pettingill";
   margin-bottom: 2rem;
-  background-color: #EE6123;
+  background-color: #679436;
   margin-right: auto;
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper {
@@ -807,16 +820,16 @@ main h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #0B3954;
+  background-color: #0A3140;
   padding: 2rem;
   z-index: 9;
-  border: 1px dashed #BFD7EA;
+  border: 1px dashed #EBF2FA;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation {
   font-size: 1.5rem;
   font-family: "Pettingill";
-  color: #BFD7EA;
+  color: #EBF2FA;
   margin: 0 auto 0 2rem;
   position: relative;
 }
@@ -847,7 +860,7 @@ main h2 {
   font-size: 3rem;
   font-weight: 800;
   display: inline;
-  color: #BFD7EA;
+  color: #EBF2FA;
   line-height: 1;
 }
 
@@ -865,7 +878,7 @@ main h2 {
           transform: rotate(-38deg);
   width: 2rem;
   height: 0.5rem;
-  background-color: #BFD7EA;
+  background-color: #EBF2FA;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -881,7 +894,7 @@ main h2 {
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__venue {
   font-size: 3rem;
   font-weight: 800;
-  color: #BFD7EA;
+  color: #EBF2FA;
   line-height: 1;
   margin-bottom: 2rem;
 }
@@ -893,37 +906,32 @@ main h2 {
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:first-child {
   font-size: 1rem;
   font-weight: 500;
-  color: #BFD7EA;
+  color: #EBF2FA;
   width: 60px;
   display: inline-block;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:last-child {
   font-size: 2rem;
-  font-family: "Pettingill";
-  color: #BFD7EA;
+  font-weight: 800;
+  color: #EBF2FA;
 }
 
-.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span {
-  color: #BFD7EA;
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > p {
+  color: #EBF2FA;
   font-size: 2rem;
   font-weight: 800;
-  line-height: 1;
-  display: block;
 }
 
-.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span .single-gig__ticket-type {
-  font-size: 0.9rem;
-  color: #BFD7EA;
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > p .single-gig__ticket-type {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #EBF2FA;
   margin-left: 0.3rem;
 }
 
-.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span:first-child {
-  margin-bottom: 0.8rem;
-}
-
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__ticket-button-wrapper {
-  border: 1px dashed #0B3954;
+  border: 1px dashed #0A3140;
   border-top: 0;
   width: 100%;
 }
@@ -944,22 +952,60 @@ main h2 {
   margin: 2rem auto 4rem auto;
 }
 
-.single-gig__description p {
+.single-gig__description section:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.single-gig__description section header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 5px solid #0A3140;
+}
+
+.single-gig__description section header h2 {
+  font-size: 3rem;
+  font-family: "Pettingill";
+  padding-right: 2rem;
+}
+
+.single-gig__description section header .single-gig__social-media-wrapper {
+  border-left: 5px solid #0A3140;
+  font-size: 2rem;
+  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-gig__description section header .single-gig__social-media-wrapper a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.single-gig__description section header .single-gig__social-media-wrapper a:hover i {
+  color: #11536c;
+}
+
+.single-gig__description section p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-.single-gig__description p:not(:last-child) {
-  margin-bottom: 2rem;
+.single-gig__description section p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 footer {
   padding: 2rem 0;
-  background-color: #0B3954;
+  background-color: #0A3140;
   width: 100vw;
 }
 
 footer p {
-  color: #BFD7EA;
+  color: #EBF2FA;
 }
 /*# sourceMappingURL=app.css.map */

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-$c-light : #BFD7EA;
-$c-dark : #0B3954;
-$c-secondary: #EE6123;
+$c-light : #EBF2FA;
+$c-dark : #0A3140;
+$c-secondary: #679436;
 $c-danger: #ee3e23;
 $c-third: #68B0AB;
 
@@ -46,7 +46,7 @@ button {
   font-weight: 800;
 
   &:hover {
-    background-color: darken($c-secondary, 10%);
+    background-color: lighten($c-secondary, 10%);
   }
 }
 
@@ -87,7 +87,7 @@ main {
   flex:1;
 }
 
-header {
+header.nav-header {
 
     background-color: $c-dark;
     color: $c-light;
@@ -175,10 +175,6 @@ header {
 main {
     flex-direction: column;
 
-    h2 {
-        font-size:3rem;
-        margin-bottom: 2rem;
-    }
 }
 
 .tns-outer {
@@ -194,6 +190,17 @@ main {
         width:100%;
         display: flex;
         justify-content: space-between;
+
+        button {
+            border: 1px dashed $c-dark;
+
+            &:first-child {
+                border-left:0;
+            }
+            &:last-child {
+                border-right:0;
+            }
+        }
     }
 
     .tns-ovh {
@@ -298,6 +305,7 @@ main {
     margin-bottom:4rem;
 
     h2 {
+        font-size:3rem;
         margin-bottom: 2rem;
     }
 
@@ -384,6 +392,11 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom:4rem;
+    
+    h2 {
+        font-size:3rem;
+        margin-bottom: 2rem;
+    }
 
     .gigs {
         display: flex;
@@ -752,7 +765,7 @@ main {
         
                                 span:last-child {
                                     font-size:2rem;
-                                    font-family: "Pettingill";
+                                    font-weight: 800;
                                     color: $c-light;
                                 }
                         }
@@ -768,21 +781,16 @@ main {
 
                         .single-gig__ticket-prices {
 
-                            > span{
+                            > p {
                                 color: $c-light;
                                 font-size: 2rem;
                                 font-weight: 800;
-                                line-height:1;
-                                display: block;
                                 
                                 .single-gig__ticket-type {
-                                    font-size:0.9rem;
+                                    font-size:1rem;
+                                    font-weight: 500;
                                     color: $c-light;
                                     margin-left:0.3rem;
-                                }
-
-                                &:first-child {
-                                    margin-bottom:0.8rem;
                                 }
                             }
                         }
@@ -810,14 +818,52 @@ main {
         flex-direction: column;
         margin: 2rem auto 4rem auto;
 
-        p {
-            font-size:1.5rem;
-            line-height: 1.5;
-
+        section {
             &:not(:last-child) {
-                margin-bottom:2rem;
+                margin-bottom: 4rem;
+            }
+
+            header {
+                display:flex;
+                margin-bottom: 1rem;
+                border-bottom: 5px solid $c-dark;
+
+                h2 {
+                    font-size: 3rem;
+                    font-family: "Pettingill";
+                    padding-right:2rem;
+                }
+
+                .single-gig__social-media-wrapper {
+                    border-left: 5px solid $c-dark;
+                    font-size:2rem;
+                    padding-left: 2rem;
+                    display: flex;
+                    align-items: center;
+
+                    a:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+
+                    a:hover {
+                        i {
+                            color: lighten($c-dark, 10%);
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size:1.5rem;
+                line-height: 1.5;
+    
+                &:not(:last-child) {
+                    margin-bottom:1rem;
+                }
             }
         }
+
+        
     }
 }
 

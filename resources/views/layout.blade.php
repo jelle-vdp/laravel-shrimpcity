@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="nav-header">
         <div class="container">
             <span class="logo">Shrimp<span>city</span></span>
             <nav>

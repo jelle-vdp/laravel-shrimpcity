@@ -17,16 +17,17 @@ return new class extends Migration
         Schema::create('gigs', function (Blueprint $table) {
             $table->id();
             $table->string('headliner_one');
+            $table->json('description_headliner_one')->nullable();
             $table->string('headliner_one_country')->nullable();
             $table->string('headliner_two')->nullable();
             $table->string('headliner_three')->nullable();
             $table->string('headliner_four')->nullable();
             $table->string('first_support_band')->nullable();
+            $table->json('description_first_support_band')->nullable();
             $table->string('second_support_band')->nullable();
             $table->string('third_support_band')->nullable();
             $table->string('fourth_support_band')->nullable();
             $table->date('date');
-            $table->json('description')->nullable();
             $table->string('slug');
             $table->string('tags');
             $table->string('venue');
