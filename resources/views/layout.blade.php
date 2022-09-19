@@ -28,6 +28,7 @@
                 <ul>
                     <li><a href="/"><span>Home</span></a></li>
                     <li><a href="/shows"><span>Shows</span></a></li>
+                    <li><a href="/news"><span>News</span></a></li>
                     <li><a href="/about"><span>About</span></a></li>
                     <li><a href="/contact"><span>Contact</span></a></li>
                 </ul>

@@ -99,6 +99,7 @@ header {
   color: #BFD7EA;
   border-top: 1px dashed #BFD7EA;
   border-bottom: 1px dashed #BFD7EA;
+  width: 100vw;
 }
 
 header .container {
@@ -244,6 +245,7 @@ main h2 {
   -webkit-filter: contrast(0.8);
           filter: contrast(0.8);
   background-position: center center;
+  background-size: cover;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__information {
@@ -373,8 +375,8 @@ main h2 {
 }
 
 .news-recent__wrapper .news-recent__link:hover img {
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
 }
 
 .news-recent__wrapper .news-recent__link article {
@@ -485,12 +487,14 @@ main h2 {
   display: flex;
 }
 
-.gigs-container .gigs a article img {
-  max-width: 200px;
+.gigs-container .gigs a article .gig__image-wrapper {
+  min-width: 200px;
   height: auto;
   border-right: 1px dashed #0B3954;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  background-position: center center;
+  background-size: cover;
 }
 
 .gigs-container .gigs a article .gig__info {
@@ -717,9 +721,245 @@ main h2 {
   font-family: "Pettingill";
 }
 
+.single-gig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.single-gig__bands-date-wrapper {
+  min-height: 70vh;
+}
+
+.single-gig__bands-date-wrapper .single-gig__image {
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  height: 90%;
+  width: 70vw;
+  min-height: 70vh;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__headliner {
+  font-size: 5rem;
+  padding: 0.7rem;
+  line-height: 1;
+  font-family: "Pettingill";
+  background-color: #EE6123;
+  margin: 4rem 0 1rem 0;
+  border: 1px dashed #0B3954;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__headliner span {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-family: "Pettingill";
+  background-color: #EE6123;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__support {
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-family: "Pettingill";
+  margin-bottom: 2rem;
+  background-color: #EE6123;
+  margin-right: auto;
+  border: 1px dashed #0B3954;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper {
+  margin-right: auto;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0B3954;
+  padding: 2rem;
+  z-index: 9;
+  border: 1px dashed #BFD7EA;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation {
+  font-size: 1.5rem;
+  font-family: "Pettingill";
+  color: #BFD7EA;
+  margin: 0 auto 0 2rem;
+  position: relative;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation::before, .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation::after {
+  content: ". . . . .";
+  position: absolute;
+  bottom: 21%;
+  letter-spacing: -2px;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation::before {
+  left: -2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation::after {
+  right: -2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span {
+  font-size: 3rem;
+  font-weight: 800;
+  display: inline;
+  color: #BFD7EA;
+  line-height: 1;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span:not(:last-child) {
+  position: relative;
+  margin-right: 1.8rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 1.1rem;
+  right: -1.9rem;
+  -webkit-transform: rotate(-38deg);
+          transform: rotate(-38deg);
+  width: 2rem;
+  height: 0.5rem;
+  background-color: #BFD7EA;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span .gig__month {
+  margin-left: 2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span .gig__year {
+  margin-left: 4rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__venue {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #BFD7EA;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings {
+  margin-bottom: 2rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:first-child {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #BFD7EA;
+  width: 60px;
+  display: inline-block;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:last-child {
+  font-size: 2rem;
+  font-family: "Pettingill";
+  color: #BFD7EA;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span {
+  color: #BFD7EA;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span .single-gig__ticket-type {
+  font-size: 0.9rem;
+  color: #BFD7EA;
+  margin-left: 0.3rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > span:first-child {
+  margin-bottom: 0.8rem;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__ticket-button-wrapper {
+  border: 1px dashed #0B3954;
+  border-top: 0;
+  width: 100%;
+}
+
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__ticket-button-wrapper button {
+  width: 100%;
+  height: 4rem;
+}
+
+.single-gig__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem auto 4rem auto;
+}
+
+.single-gig__description p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.single-gig__description p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 footer {
   padding: 2rem 0;
   background-color: #0B3954;
+  width: 100vw;
+}
+
+footer p {
   color: #BFD7EA;
 }
 /*# sourceMappingURL=app.css.map */

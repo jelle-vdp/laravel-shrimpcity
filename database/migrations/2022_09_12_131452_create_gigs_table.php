@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -25,7 +26,7 @@ return new class extends Migration
             $table->string('third_support_band')->nullable();
             $table->string('fourth_support_band')->nullable();
             $table->date('date');
-            $table->longText('description')->nullable();
+            $table->json('description')->nullable();
             $table->string('slug');
             $table->string('tags');
             $table->string('venue');

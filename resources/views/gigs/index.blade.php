@@ -8,7 +8,7 @@
             @foreach ($gigs as $gig)
                 <a class="gig__link" href="/shows/{{ $gig['slug'] }}">
                     <article class="gig__wrapper">
-                        <img class="gig__image" src="{{ $gig['logo-url']}}">
+                        <div class="gig__image-wrapper" style="background-image:url({{ $gig['logo-url']}})"></div>
                         <div class="gig__info">
                             <div class="gig__date">
                                 <span class="gig__day">{{ date_format(date_create($gig['date']), 'd') }}</span>

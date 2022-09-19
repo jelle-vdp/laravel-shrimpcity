@@ -1,4 +1,47 @@
-<article class="gig">
-    <h2>{{ $gig['headliner_one'] }}</h2>
-    <p>{{ $gig['description'] }}</p>
-</article>
+@component('layout')
+    <section class="single-gig">
+        <div class="single-gig__bands-date-wrapper">
+            <div class="container">
+                <img class="single-gig__image" src="{{ $gig['logo-url'] }}">
+                <div class="single-gig__bands-date-wrapper">
+                    <div class="single-gig__bands-wrapper">
+                        <h3 class="single-gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
+                        <h4 class="single-gig__support">+ {{ $gig['first_support_band'] }}</h3>
+                    </div>
+                    <div class="single-gig__info-button-wrapper">
+                        <div class="single-gig__extra-info-wrapper">
+                            <p class="single-gig__explanation">When?</p>
+                            <div class="single-gig__date">
+                                <span class="single-gig__day">{{ date_format(date_create($gig['date']), 'd') }}</span>
+                                <span class="single-gig__month">{{ date_format(date_create($gig['date']), 'm') }}</span>
+                                <span class="single-gig__year">{{ date_format(date_create($gig['date']), 'Y') }}</span>
+                            </div>
+                            <p class="single-gig__explanation">Where?</p>
+                            <h4 class="single-gig__venue">{{ $gig['venue'] }}</h4>
+                            <p class="single-gig__explanation">Timetable</p>
+                            <div class="single-gig__timings">
+                                <p class="single-gig__timing"><span>19h00:</span> <span>Doors</span></p>
+                                <p class="single-gig__timing"><span>20h00:</span> <span>{{ $gig['first_support_band'] }}</span></p>
+                                <p class="single-gig__timing"><span>21h00:</span> <span>{{ $gig['headliner_one'] }}</span></p>
+                            </div>
+                            <p class="single-gig__explanation">Tickets</p>
+                            <p class="single-gig__ticket-prices">
+                                <span>€{{ $gig['price'] - 2 }}<span class="single-gig__ticket-type">/ Pre-sale</span></span>
+                                <span>€{{ $gig['price'] }}<span class="single-gig__ticket-type">/ At the door</span></span>
+                            </p>
+                        </div>
+                        <div class="single-gig__ticket-button-wrapper">
+                            <button><i class="fa-solid fa-ticket"></i> Buy tickets</button>
+                        </div>
+                    </div>
+                </div>   
+            </div>   
+        </div>
+
+        <div class="single-gig__description container">
+            @foreach ($gig_description as $description)
+                <p>{!! $description !!}</p>
+            @endforeach
+        </div>
+    </section>
+@endcomponent

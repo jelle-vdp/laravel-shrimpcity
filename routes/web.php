@@ -26,8 +26,10 @@ Route::get('/', function () {
 });
 
 Route::get('/shows/{slug}', function ($slug) {
+    $gig = Gig::where('slug', $slug)->firstOrFail();
     return view('gigs.show', [
-        'gig' => Gig::where('slug', $slug)->firstOrFail()
+        'gig' => $gig,
+        'gig_description' => json_decode($gig['description'])
     ]);
 });
 

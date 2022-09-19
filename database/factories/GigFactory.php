@@ -20,6 +20,8 @@ class GigFactory extends Factory
     {
         $headlinerFirst = $this->faker->firstName();
         $date = $this->faker->dateTimeInInterval($startDate = 'now', $interval = '+ 365 days');
+        $description = $this->faker->paragraphs($nb = 6, $asText = false);
+        array_push($description, "Yes, you can also include seperate links, like <a href='https://www.google.com'>this</a> or for example make a <b>text bold</b>.");
         
         return [
             'headliner_one' => $headlinerFirst . ' ' . $this->faker->city(),
@@ -32,7 +34,7 @@ class GigFactory extends Factory
             'third_support_band' => null,
             'fourth_support_band' => null,
             'date' => $this->faker->dateTimeInInterval($startDate = 'now', $interval = '+ 365 days', $timezone = null),
-            'description' => $this->faker->paragraph(),
+            'description' => json_encode($description),
             'slug' => strtolower($headlinerFirst),
             'tags' => 'Shrimp',
             'venue' => "Shrimpcity",
