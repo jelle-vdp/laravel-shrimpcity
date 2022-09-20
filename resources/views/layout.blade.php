@@ -23,10 +23,9 @@
 <body>
     <header class="nav-header">
         <div class="container">
-            <span class="logo">Shrimp<span>city</span></span>
+            <a href="/"><span class="logo">Shrimp<span>city</span></span></a>
             <nav>
                 <ul>
-                    <li><a href="/"><span>Home</span></a></li>
                     <li><a href="/shows"><span>Shows</span></a></li>
                     <li><a href="/news"><span>News</span></a></li>
                     <li><a href="/about"><span>About</span></a></li>

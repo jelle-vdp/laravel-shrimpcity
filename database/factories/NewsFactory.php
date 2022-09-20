@@ -26,7 +26,7 @@ class NewsFactory extends Factory
             'slug' => strtolower(str_replace(" ", "-", $title)),
             'body' => $this->faker->paragraph($nbSentences = 10, $variableNbSentences = true),
             'fake_date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
-            'image_url' => 'https://picsum.photos/id/' . rand(1, 100) .  '/500/500',
+            'image_url' => 'https://picsum.photos/id/' . rand(1, 100) .  '/1600/1600',
             'gig_id' => Gig::all()->random()->id
         ];
     }

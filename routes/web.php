@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Models\Gig;
 use App\Models\News;
 use Illuminate\Support\Facades\Route;
@@ -17,11 +18,11 @@ use League\Flysystem\DirectoryListing;
 */
 
 Route::get('/', function () {
-    $gigs = Gig::all();
-    $news = News::all();
+    $gigs = Gig::all()->take(10);
+    $news = News::all()->take(3);
     return view('gigs.index', [
-        'gigs' => $gigs->sortBy('date')->take(10),
-        'news' => $news->sortByDesc('fake_date')->take(3)
+        'gigs' => $gigs->sortBy('date'),
+        'news' => $news->sortByDesc('fake_date')
     ]);
 });
 
@@ -34,5 +35,16 @@ Route::get('/shows/{slug}', function ($slug) {
     ]);
 });
 
+Route::get('/news', function () {
+    $news = News::all();
+    return view('news.index', [
+        'news' => $news->sortByDesc('fake_date')
+    ]);
+});
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::post('/send-email', [ContactController::class, 'sendEmail'])->name('send.email');
 

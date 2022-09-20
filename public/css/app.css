@@ -76,6 +76,18 @@ body {
   margin-right: auto;
 }
 
+@media (min-width: 1700px) {
+  .container.container--large {
+    max-width: calc(1600px - 2rem);
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1699px) {
+  .container.container--large {
+    max-width: calc(1480px - 2rem);
+  }
+}
+
 @media (min-width: 1380px) {
   .container {
     max-width: calc(1280px - 2rem);
@@ -94,10 +106,14 @@ main {
           flex: 1;
 }
 
+h1 {
+  margin: 4rem auto 2rem auto;
+  font-size: 4rem;
+}
+
 header.nav-header {
   background-color: #0A3140;
   color: #EBF2FA;
-  border-top: 1px dashed #EBF2FA;
   border-bottom: 1px dashed #EBF2FA;
   width: 100vw;
 }
@@ -111,21 +127,29 @@ header.nav-header .container {
           justify-content: space-between;
 }
 
-header.nav-header .logo {
+header.nav-header a {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+header.nav-header a:hover .logo, header.nav-header a:hover .logo span {
+  color: #d7e5f5;
+}
+
+header.nav-header a .logo {
   font-family: "Pettingill";
   font-size: 3rem;
   line-height: normal;
   position: relative;
   color: #EBF2FA;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   margin-bottom: 1.5rem;
+  display: block;
 }
 
-header.nav-header .logo span {
+header.nav-header a .logo span {
   font-family: "Pettingill";
   position: absolute;
-  top: 5.2rem;
+  top: 2rem;
   left: 50%;
   color: #EBF2FA;
 }
@@ -322,7 +346,19 @@ main {
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide h4 {
   font-size: 2rem;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__link {
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__link:hover {
+  margin-left: 1rem;
 }
 
 .tns-outer .recent-gigs-slider .recent-gigs-slider__slide .recent-gigs-slider__ticket-btn {
@@ -996,6 +1032,137 @@ main {
 }
 
 .single-gig__description section p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.news__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 4rem;
+}
+
+.news__wrapper .news__link {
+  text-decoration: none;
+}
+
+.news__wrapper .news__link:not(:first-child) {
+  aspect-ratio: 1/1;
+}
+
+.news__wrapper .news__link:first-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  aspect-ratio: 3 / 1;
+}
+
+.news__wrapper .news__link:hover .news__image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.news__wrapper .news__link:hover .news__item .news__content {
+  top: 3rem;
+}
+
+.news__wrapper .news__link .news__item {
+  border: 1px dashed #EBF2FA;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.news__wrapper .news__link .news__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.news__wrapper .news__link .news__item .news__content {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.news__wrapper .news__link .news__item .news__content p {
+  background-color: #679436;
+  padding: 0.4rem;
+  font-weight: 800;
+  display: inline-block;
+  margin-right: auto;
+  border: 1px dashed #0A3140;
+  border-bottom: 0;
+}
+
+.news__wrapper .news__link .news__item .news__content p span:not(:last-child) {
+  border-right: 1px dashed #0A3140;
+  padding-right: 0.4rem;
+}
+
+.news__wrapper .news__link .news__item .news__content h3 {
+  background-color: #679436;
+  font-size: 3rem;
+  padding: 0.8rem;
+  display: inline-block;
+  margin-right: auto;
+  line-height: 1;
+  font-family: 'Pettingill';
+  border: 1px dashed #0A3140;
+}
+
+.contact__message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact__link {
+  font-size: 1.1rem;
+}
+
+.contact__link a {
+  text-decoration: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.contact__link a:hover {
+  padding-left: 1rem;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.contact__form label {
+  margin-bottom: 0.5rem;
+}
+
+.contact__form input, .contact__form textarea {
   margin-bottom: 1rem;
 }
 

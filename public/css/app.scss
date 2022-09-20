@@ -74,6 +74,18 @@ body {
     margin-left:auto;
     margin-right:auto;
 
+    @media (min-width: 1700px) {
+        &.container--large {
+            max-width: calc(1600px - 2rem);
+        }
+    }
+
+    @media (min-width: 1600px) and (max-width: 1699px) {
+        &.container--large {
+            max-width: calc(1480px - 2rem);
+        }
+    }
+
     @media (min-width:1380px){
         max-width: calc(1280px - 2rem);
     }
@@ -87,11 +99,16 @@ main {
   flex:1;
 }
 
+
+h1 {
+    margin: 4rem auto 2rem auto;
+    font-size: 4rem;
+}
+
 header.nav-header {
 
     background-color: $c-dark;
     color: $c-light;
-    border-top:1px dashed $c-light;
     border-bottom:1px dashed $c-light;
     width:100vw;
 
@@ -99,26 +116,36 @@ header.nav-header {
         display: flex;
         justify-content: space-between;
     }
-
-    .logo {
-        font-family: "Pettingill";
-        font-size: 3rem;
-        line-height: normal;
-        position: relative;
-        color: $c-light;
+    a {
         padding-top:3rem;
         padding-bottom:3rem;
-        margin-bottom: 1.5rem;
-        
 
-        span {
+        &:hover {
+            .logo, .logo span {
+                color: darken($c-light, 5%);
+            }
+        }
+
+        .logo {
             font-family: "Pettingill";
-            position: absolute;
-            top: 5.2rem;
-            left: 50%;
+            font-size: 3rem;
+            line-height: normal;
+            position: relative;
             color: $c-light;
+            margin-bottom: 1.5rem;
+            display: block;
+            
+    
+            span {
+                font-family: "Pettingill";
+                position: absolute;
+                top: 2rem;
+                left: 50%;
+                color: $c-light;
+            }
         }
     }
+    
 
     nav {
         display: flex;
@@ -281,7 +308,18 @@ main {
 
             h4 {
                 font-size:2rem;
+            }
+
+            .recent-gigs-slider__link {
+                font-size: 1.2rem;
+                font-weight:600;
                 margin-bottom:1rem;
+                text-decoration: none;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    margin-left:1rem;
+                }
             }
 
             .recent-gigs-slider__ticket-btn {
@@ -864,6 +902,123 @@ main {
         }
 
         
+    }
+}
+
+.news__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom:4rem;
+
+    .news__link {
+        text-decoration: none;
+
+        &:not(:first-child) {
+            aspect-ratio: 1/1;
+        }
+
+        &:first-child {
+            grid-column: 1 / 4;
+            aspect-ratio: 3 / 1;
+        }
+
+        &:hover {
+            .news__image {
+                transform: scale(1.1);
+            }
+
+            .news__item .news__content {
+                top:3rem;
+            }
+        }
+
+        .news__item {
+            border:1px dashed $c-light;
+            width: 100%;
+            height: 100%;
+            position:relative;
+            overflow:hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+                transition: all 1s ease-in-out;
+            }
+
+            .news__content {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+                display: inline-flex;
+                flex-direction: column;
+                transition: all 1s ease-in-out;
+
+                p {
+                    background-color: $c-secondary;
+                    padding:0.4rem;
+                    font-weight: 800;
+                    display: inline-block;
+                    margin-right: auto;
+                    border: 1px dashed $c-dark;
+                    border-bottom: 0;
+
+                    span {
+                        &:not(:last-child){
+                            border-right: 1px dashed $c-dark;
+                            padding-right: 0.4rem;
+                        }
+                    }
+                }
+    
+                h3 {
+                    background-color: $c-secondary;
+                    font-size:3rem;
+                    padding:0.8rem;
+                    display: inline-block;
+                    margin-right: auto;
+                    line-height: 1;
+                    font-family: 'Pettingill';
+                    border: 1px dashed $c-dark;
+                }
+            }
+            
+        }
+    }
+}
+
+.contact__message {
+    font-size: 1.5rem;
+    margin-bottom:1rem;
+}
+
+.contact__link {
+    font-size: 1.1rem;
+
+    a {
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+            padding-left:1rem;
+        }
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom:4rem;
+
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+        margin-bottom: 1rem;
     }
 }
 

@@ -5,6 +5,7 @@
             <div class="recent-gigs-slider__information">
                 <h3 class="recent-gigs-slider__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
                 <h4 class="recent-gigs-slider__support">+ {{ $gig['first_support_band'] }}</h3>
+                <a href="/shows/{{ $gig['slug'] }}" class="recent-gigs-slider__link"><i class="fa-solid fa-arrow-right-long"></i> More info</a>
                 <button class="recent-gigs-slider__ticket-btn">Buy tickets</button>
                 <div class="recent-gigs-slider__date">
                     <span class="recent-gigs-slider__day">{{ date_format(date_create($gig['date']), 'd') }}</span>
