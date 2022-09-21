@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->longText('body');
+            $table->json('body');
             $table->date('fake_date');
             $table->string('image_url')->nullable();
             $table->foreignId('gig_id')->constrained()->nullable();

@@ -5,8 +5,8 @@
                 <img class="single-gig__image" src="{{ $gig['logo-url'] }}">
                 <div class="single-gig__bands-date-wrapper">
                     <div class="single-gig__bands-wrapper">
-                        <h3 class="single-gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
-                        <h4 class="single-gig__support">+ {{ $gig['first_support_band'] }}</h3>
+                        <h1 class="single-gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
+                        <h2 class="single-gig__support">+ {{ $gig['first_support_band'] }}</h3>
                     </div>
                     <div class="single-gig__info-button-wrapper">
                         <div class="single-gig__extra-info-wrapper">

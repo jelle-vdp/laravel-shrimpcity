@@ -14,6 +14,18 @@
   color: #0A3140;
 }
 
+@media (min-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 fieldset {
   border: 0;
 }
@@ -32,7 +44,7 @@ button, input:not([type="file"]), textarea, select {
 }
 
 button {
-  background-color: #679436;
+  background-color: #81b944;
   font-size: 1.4rem;
   color: #0A3140;
   position: relative;
@@ -41,7 +53,7 @@ button {
 }
 
 button:hover {
-  background-color: #81b944;
+  background-color: #679436;
 }
 
 .link {
@@ -94,6 +106,18 @@ body {
   }
 }
 
+@media (min-width: 800px) {
+  .container.container--small {
+    max-width: calc(700px - 2rem);
+  }
+}
+
+@media (max-width: 800px) {
+  .container.container--small {
+    max-width: calc(500px - 2rem);
+  }
+}
+
 @media (max-width: 600px) {
   .container {
     max-width: calc(100vw - 40px);
@@ -107,7 +131,7 @@ main {
 }
 
 h1 {
-  margin: 4rem auto 2rem auto;
+  margin: 4rem auto 2rem 0;
   font-size: 4rem;
 }
 
@@ -128,8 +152,8 @@ header.nav-header .container {
 }
 
 header.nav-header a {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 header.nav-header a:hover .logo, header.nav-header a:hover .logo span {
@@ -142,7 +166,7 @@ header.nav-header a .logo {
   line-height: normal;
   position: relative;
   color: #EBF2FA;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.4rem;
   display: block;
 }
 
@@ -283,9 +307,8 @@ main {
   position: absolute;
   bottom: -4rem;
   right: 4rem;
-  width: 500px;
   padding: 1rem;
-  background-color: #679436;
+  background-color: #81b944;
   color: #0A3140;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,7 +330,7 @@ main {
   top: -1px;
   right: calc(100% + 1px);
   font-size: 1.4rem;
-  background-color: #679436;
+  background-color: #81b944;
   color: #0A3140;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,6 +567,7 @@ main {
   transition: all 0.5s ease-in-out;
   background-position: center center;
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .gigs-container .gigs a article .gig__info {
@@ -778,19 +802,16 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.single-gig__bands-date-wrapper {
-  min-height: 70vh;
+  position: relative;
 }
 
 .single-gig__bands-date-wrapper .single-gig__image {
   position: absolute;
   top: 0;
-  left: 10vw;
-  height: 90%;
-  width: 70vw;
-  min-height: 70vh;
+  left: 20vw;
+  width: 80vw;
+  right: 0;
+  height: calc(100vh - 8rem);
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -806,6 +827,10 @@ main {
           flex-direction: column;
 }
 
+.single-gig__bands-date-wrapper .single-gig__bands-date-wrapper > .container {
+  overflow-y: hidden;
+}
+
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,28 +843,28 @@ main {
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__headliner {
-  font-size: 5rem;
   padding: 0.7rem;
   line-height: 1;
   font-family: "Pettingill";
-  background-color: #679436;
-  margin: 4rem 0 1rem 0;
+  background-color: #81b944;
   border: 1px dashed #0A3140;
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__headliner span {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   font-family: "Pettingill";
-  background-color: #679436;
+  background-color: #81b944;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__bands-wrapper .single-gig__support {
-  padding: 1rem;
-  font-size: 2.5rem;
+  padding: 0.7rem;
+  font-size: 2rem;
   font-family: "Pettingill";
-  margin-bottom: 2rem;
-  background-color: #679436;
+  margin-bottom: 1rem;
+  background-color: #81b944;
   margin-right: auto;
   border: 1px dashed #0A3140;
 }
@@ -857,13 +882,13 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #0A3140;
-  padding: 2rem;
+  padding: 1.5rem;
   z-index: 9;
   border: 1px dashed #EBF2FA;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__explanation {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Pettingill";
   color: #EBF2FA;
   margin: 0 auto 0 2rem;
@@ -889,11 +914,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 800;
   display: inline;
   color: #EBF2FA;
@@ -908,12 +933,12 @@ main {
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__date > span:not(:last-child)::after {
   content: "";
   position: absolute;
-  bottom: 1.1rem;
+  bottom: 0.8rem;
   right: -1.9rem;
   -webkit-transform: rotate(-38deg);
           transform: rotate(-38deg);
-  width: 2rem;
-  height: 0.5rem;
+  width: 1.8rem;
+  height: 0.4rem;
   background-color: #EBF2FA;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -928,7 +953,7 @@ main {
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__venue {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #EBF2FA;
   line-height: 1;
@@ -936,31 +961,31 @@ main {
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:first-child {
   font-size: 1rem;
   font-weight: 500;
   color: #EBF2FA;
-  width: 60px;
+  width: 3.8rem;
   display: inline-block;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__timings .single-gig__timing span:last-child {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: #EBF2FA;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > p {
   color: #EBF2FA;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__extra-info-wrapper .single-gig__ticket-prices > p .single-gig__ticket-type {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #EBF2FA;
   margin-left: 0.3rem;
@@ -974,7 +999,7 @@ main {
 
 .single-gig__bands-date-wrapper .single-gig__bands-date-wrapper .single-gig__info-button-wrapper .single-gig__ticket-button-wrapper button {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
 }
 
 .single-gig__description {
@@ -985,7 +1010,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 2rem auto 4rem auto;
+  margin: 2rem auto;
 }
 
 .single-gig__description section:not(:last-child) {
@@ -1064,7 +1089,7 @@ main {
 }
 
 .news__wrapper .news__link:hover .news__item .news__content {
-  top: 3rem;
+  bottom: 3rem;
 }
 
 .news__wrapper .news__link .news__item {
@@ -1091,19 +1116,22 @@ main {
   left: 1rem;
   right: 1rem;
   bottom: 1rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
 .news__wrapper .news__link .news__item .news__content p {
-  background-color: #679436;
+  background-color: #81b944;
   padding: 0.4rem;
   font-weight: 800;
   display: inline-block;
@@ -1118,7 +1146,7 @@ main {
 }
 
 .news__wrapper .news__link .news__item .news__content h3 {
-  background-color: #679436;
+  background-color: #81b944;
   font-size: 3rem;
   padding: 0.8rem;
   display: inline-block;
@@ -1126,6 +1154,146 @@ main {
   line-height: 1;
   font-family: 'Pettingill';
   border: 1px dashed #0A3140;
+}
+
+.single-news__image {
+  width: 100%;
+  height: 70vh;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 1px dashed #0A3140;
+}
+
+.single-news__image header {
+  background-color: #EBF2FA;
+  margin: 0 auto -1px 0;
+  padding: 2rem;
+  border: 1px dashed #0A3140;
+  border-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 70%;
+  background-color: #81b944;
+}
+
+.single-news__image header::after {
+  content: '';
+  position: absolute;
+  height: 1rem;
+  width: 60%;
+  bottom: -0.5rem;
+  left: 2rem;
+  background-color: #0A3140;
+}
+
+.single-news__image header time {
+  margin-right: auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5rem solid #0A3140;
+  margin-bottom: 2rem;
+}
+
+.single-news__image header time span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.single-news__image header h1 {
+  line-height: 1;
+  font-family: 'Pettingill';
+  font-size: 6rem;
+  margin: 0;
+}
+
+.single-news__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  border: 1px dashed #0A3140;
+  border-top: 0;
+  width: 80%;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  background-color: #81b944;
+}
+
+.single-news__body p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.single-news__body p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.single-news__other-items {
+  width: 20%;
+  border: 1px dashed #0A3140;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: auto;
+}
+
+.single-news__other-items a {
+  padding: 2rem;
+  border-bottom: 1px dashed #0A3140;
+  border-left: 0;
+  text-decoration: none;
+}
+
+.single-news__other-items a time {
+  margin-bottom: 0.5rem;
+}
+
+.single-news__other-items a img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.about-us__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-us__content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.about-us__content p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .contact__message {

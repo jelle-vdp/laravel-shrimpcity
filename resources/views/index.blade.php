@@ -1,12 +1,14 @@
 @component('layout')
+    @include('partials._hero')
+    @include('partials._recent-news')
     <section class="container gigs-container">
-        <h1>Upcoming gigs</h1>
+        <h2>Upcoming gigs</h2>
         @unless (count($gigs) === 0)
         <section class="gigs"> 
             @foreach ($gigs as $gig)
                 <a class="gig__link" href="/shows/{{ $gig['slug'] }}">
                     <article class="gig__wrapper">
-                        <div class="gig__image-wrapper" style="background-image:url({{ $gig['logo-url']}})"></div>
+                        {{-- <div class="gig__image-wrapper" style="background-image:url({{ $gig['logo-url']}})"></div> --}}
                         <div class="gig__info">
                             <div class="gig__date">
                                 <span class="gig__day">{{ date_format(date_create($gig['date']), 'd') }}</span>

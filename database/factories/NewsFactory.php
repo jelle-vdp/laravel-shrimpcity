@@ -20,11 +20,10 @@ class NewsFactory extends Factory
     public function definition()
     {
         $title = $this->faker->sentence($nbWords = 4, $variableNbWords = true);
-        
         return [
             'title' => $title,
             'slug' => strtolower(str_replace(" ", "-", $title)),
-            'body' => $this->faker->paragraph($nbSentences = 10, $variableNbSentences = true),
+            'body' => json_encode($this->faker->paragraphs($nb = 12, $asText = false)),
             'fake_date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
             'image_url' => 'https://picsum.photos/id/' . rand(1, 100) .  '/1600/1600',
             'gig_id' => Gig::all()->random()->id

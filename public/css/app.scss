@@ -2,7 +2,7 @@
 
 $c-light : #EBF2FA;
 $c-dark : #0A3140;
-$c-secondary: #679436;
+$c-secondary: #81b944;
 $c-danger: #ee3e23;
 $c-third: #68B0AB;
 
@@ -18,6 +18,16 @@ $c-third: #68B0AB;
     box-sizing: border-box;
     line-height: 1.4;
     color: $c-dark;
+}
+
+html {
+    @media (min-width:1400px){
+        font-size: 16px;
+    }
+
+    @media (min-width:1200px){
+        font-size: 12px;
+    }
 }
 
 fieldset {
@@ -46,7 +56,7 @@ button {
   font-weight: 800;
 
   &:hover {
-    background-color: lighten($c-secondary, 10%);
+    background-color: darken($c-secondary, 10%);
   }
 }
 
@@ -90,6 +100,18 @@ body {
         max-width: calc(1280px - 2rem);
     }
 
+    @media (min-width:800px){
+        &.container--small {
+            max-width: calc(700px - 2rem);
+        }
+    }
+
+    @media (max-width:800px){
+        &.container--small {
+            max-width: calc(500px - 2rem);
+        }
+    }
+
     @media (max-width: 600px){
         max-width: calc(100vw - 40px);
     }
@@ -101,7 +123,7 @@ main {
 
 
 h1 {
-    margin: 4rem auto 2rem auto;
+    margin: 4rem auto 2rem 0;
     font-size: 4rem;
 }
 
@@ -117,8 +139,8 @@ header.nav-header {
         justify-content: space-between;
     }
     a {
-        padding-top:3rem;
-        padding-bottom:3rem;
+        padding-top:1rem;
+        padding-bottom:1rem;
 
         &:hover {
             .logo, .logo span {
@@ -132,7 +154,7 @@ header.nav-header {
             line-height: normal;
             position: relative;
             color: $c-light;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.4rem;
             display: block;
             
     
@@ -255,7 +277,6 @@ main {
                 position: absolute;
                 bottom: -4rem;
                 right: 4rem;
-                width: 500px;
                 padding: 1rem;
                 background-color: $c-secondary;
                 color: $c-dark;
@@ -475,6 +496,7 @@ main {
                     transition: all 0.5s ease-in-out;
                     background-position: center center;
                     background-size: cover;
+                    aspect-ratio: 1 / 1;
                 }
     
                 .gig__info {
@@ -660,17 +682,17 @@ main {
 .single-gig {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &__bands-date-wrapper {
-            min-height:70vh;
 
             .single-gig__image {
                 position: absolute;
                 top:0;
-                left:10vw;
-                height:90%;
-                width:70vw;
-                min-height:70vh;
+                left:20vw;
+                width:80vw;
+                right:0;
+                height:calc(100vh - 8rem);
                 z-index: -1;
                 object-fit: cover;
             }
@@ -679,19 +701,23 @@ main {
                 display: flex;
                 flex-direction: column;
 
+                > .container {
+                    overflow-y: hidden;
+                }
+
                 .single-gig__bands-wrapper {
                     display:flex;
                     flex-direction: column;
                     z-index: 9;
     
-                    .single-gig__headliner {
-                        font-size:5rem;
+                    .single-gig__headliner {                        
                         padding: 0.7rem;
                         line-height: 1;
                         font-family: "Pettingill";
                         background-color: $c-secondary;
-                        margin: 4rem 0 1rem 0;
                         border: 1px dashed $c-dark;
+                        font-size:4rem;
+                        margin: 1rem 0 1rem 0;
                 
                         span {
                             font-size:1.5rem;
@@ -701,10 +727,10 @@ main {
                         }
                     }
                     .single-gig__support {
-                        padding:1rem;
-                        font-size:2.5rem;
+                        padding:0.7rem;
+                        font-size:2rem;
                         font-family: "Pettingill";
-                        margin-bottom:2rem;
+                        margin-bottom:1rem;
                         background-color: $c-secondary;
                         margin-right: auto;
                         border: 1px dashed $c-dark;
@@ -716,12 +742,11 @@ main {
                         display: flex;
                         flex-direction: column;
                         background-color: $c-dark;
-                        padding: 2rem;
-                        z-index: 9;
+                        padding: 1.5rem;                        z-index: 9;
                         border: 1px dashed $c-light;
 
                         .single-gig__explanation {
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                             font-family: "Pettingill";
                             color: $c-light;
                             margin: 0 auto 0 2rem;
@@ -744,10 +769,10 @@ main {
 
                         .single-gig__date {
                             display: flex;
-                            margin-bottom:2rem;
+                            margin-bottom:1.5rem;
                 
                             > span {
-                                font-size:3rem;
+                                font-size:2.4rem;
                                 font-weight: 800;
                                 display: inline;
                                 color: $c-light;
@@ -760,11 +785,11 @@ main {
                                     &::after {
                                         content: "";
                                         position: absolute;
-                                        bottom: 1.1rem;
+                                        bottom: 0.8rem;
                                         right: -1.9rem;
                                         transform: rotate(-38deg);
-                                        width: 2rem;
-                                        height: 0.5rem;
+                                        width: 1.8rem;
+                                        height: 0.4rem;
                                         background-color: $c-light;
                                         transition: all 0.5s ease-in-out;
                                     }
@@ -782,14 +807,14 @@ main {
                         }
 
                         .single-gig__venue {
-                            font-size:3rem;
+                            font-size:2.4rem;
                             font-weight: 800;
                             color: $c-light;
                             line-height: 1;
                             margin-bottom:2rem;
                         }
                         .single-gig__timings {
-                            margin-bottom:2rem;
+                            margin-bottom:1.5rem;
 
                             .single-gig__timing {
 
@@ -797,12 +822,12 @@ main {
                                     font-size:1rem;
                                     font-weight: 500;
                                     color: $c-light;
-                                    width: 60px;
+                                    width: 3.8rem;
                                     display: inline-block;
                                 }
         
                                 span:last-child {
-                                    font-size:2rem;
+                                    font-size:1.7rem;
                                     font-weight: 800;
                                     color: $c-light;
                                 }
@@ -821,11 +846,11 @@ main {
 
                             > p {
                                 color: $c-light;
-                                font-size: 2rem;
+                                font-size: 1.6rem;
                                 font-weight: 800;
                                 
                                 .single-gig__ticket-type {
-                                    font-size:1rem;
+                                    font-size:0.8rem;
                                     font-weight: 500;
                                     color: $c-light;
                                     margin-left:0.3rem;
@@ -842,7 +867,7 @@ main {
 
                         button {
                             width:100%;
-                            height:4rem;
+                            height:3rem;
                         }
                     }
                 }
@@ -854,7 +879,7 @@ main {
     &__description {
         display:flex;
         flex-direction: column;
-        margin: 2rem auto 4rem auto;
+        margin: 2rem auto;
 
         section {
             &:not(:last-child) {
@@ -928,7 +953,7 @@ main {
             }
 
             .news__item .news__content {
-                top:3rem;
+                bottom:3rem;
             }
         }
 
@@ -953,8 +978,9 @@ main {
                 left: 1rem;
                 right: 1rem;
                 bottom: 1rem;
-                display: inline-flex;
+                display: flex;
                 flex-direction: column;
+                justify-content: flex-end;
                 transition: all 1s ease-in-out;
 
                 p {
@@ -986,6 +1012,119 @@ main {
                 }
             }
             
+        }
+    }
+}
+
+.single-news__image {
+    width:100%;
+    height: 70vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom:1px dashed $c-dark;
+
+    header {
+        background-color: $c-light;
+        margin:0 auto -1px 0;
+        padding:2rem;
+        border: 1px dashed $c-dark;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 70%;
+        background-color: $c-secondary;
+        
+        &::after {
+            content:'';
+            position: absolute;
+            height:1rem;
+            width:60%;
+            bottom:-0.5rem;
+            left:2rem;
+            background-color: $c-dark;
+        }
+
+        time {
+            margin-right: auto;
+
+            span {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            padding-bottom:0.5rem;
+            border-bottom: 0.5rem solid $c-dark;
+            margin-bottom:2rem;
+        }
+
+        h1 {
+            line-height: 1;
+            font-family: 'Pettingill';
+            font-size: 6rem;
+            margin:0;
+        }
+    }
+}
+
+.single-news__body {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border:1px dashed $c-dark;
+    border-top:0;
+    width:80%;
+    margin-right:auto;
+    margin-bottom:4rem;
+    background-color: $c-secondary;
+
+    p {
+        font-size:1.5rem;
+        line-height: 1.5;
+        
+        &:not(:last-child) {
+            margin-bottom:1rem;
+        }
+    }
+}
+
+.single-news__other-items {
+    width:20%;
+    border:1px dashed $c-dark;
+    display:flex;
+    flex-direction: column;
+    margin-bottom:auto;
+
+    a {
+        padding:2rem;
+        border-bottom: 1px dashed $c-dark;
+        border-left:0;
+        text-decoration: none;
+
+        time {
+            margin-bottom:0.5rem;
+        }
+        
+        img {
+            width:100%;
+            height:auto;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.about-us__content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size:1.5rem;
+        line-height: 1.5;
+        
+        &:not(:last-child) {
+            margin-bottom:1rem;
         }
     }
 }

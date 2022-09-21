@@ -20,11 +20,19 @@ use League\Flysystem\DirectoryListing;
 Route::get('/', function () {
     $gigs = Gig::all()->take(10);
     $news = News::all()->take(3);
-    return view('gigs.index', [
+    return view('index', [
         'gigs' => $gigs->sortBy('date'),
         'news' => $news->sortByDesc('fake_date')
     ]);
 });
+
+Route::get('/shows', function () {
+    $gigs = Gig::all();
+    return view('gigs.index', [
+        'gigs' => $gigs->sortBy('date')
+    ]);
+});
+
 
 Route::get('/shows/{slug}', function ($slug) {
     $gig = Gig::where('slug', $slug)->firstOrFail();
@@ -40,6 +48,19 @@ Route::get('/news', function () {
     return view('news.index', [
         'news' => $news->sortByDesc('fake_date')
     ]);
+});
+
+Route::get('/news/{slug}', function ($slug) {
+    $news = News::where('slug', $slug)->firstOrFail();
+    return view('news.show', [
+        'news' => $news,
+        'other_news' => News::all()->take(2),
+        'body' => json_decode($news['body'])
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 Route::get('/contact', function () {
