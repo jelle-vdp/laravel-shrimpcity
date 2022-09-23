@@ -1,4 +1,7 @@
 @component('layout')
+@section("meta-title", "News | Shrimpcity")
+@section("meta-description", "All the latest news about Shrimpcity.")
+
     <h1 class="container">News</h2>
     <section class="news__wrapper container container--large">
         @foreach($news as $newsItem)

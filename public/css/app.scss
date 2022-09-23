@@ -43,6 +43,15 @@ button {
     border:0;
 }
 
+p a {
+    border-bottom: 2px dashed currentColor;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: 2px solid currentColor;
+    }
+}
+
 button, input:not([type="file"]), textarea, select {
     padding: 0.5rem 0.8rem;
 }
@@ -882,6 +891,7 @@ main {
         margin: 2rem auto;
 
         section {
+
             &:not(:last-child) {
                 margin-bottom: 4rem;
             }
@@ -1050,14 +1060,30 @@ main {
 
         time {
             margin-right: auto;
+            padding-bottom:0.5rem;
+            border-bottom: 0.5rem solid $c-dark;
+            margin-bottom:1.8rem;
 
             span {
                 font-size: 1.5rem;
                 font-weight: bold;
+                
+                &:not(:last-child){
+                    position:relative;
+                    margin-right:1rem;
+
+                    &::after {
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        right:-0.8rem;
+                        transform: rotate(23deg);
+                        height:100%;
+                        width:0.3rem;
+                        background-color: $c-dark;
+                    }
+                }
             }
-            padding-bottom:0.5rem;
-            border-bottom: 0.5rem solid $c-dark;
-            margin-bottom:2rem;
         }
 
         h1 {
@@ -1080,6 +1106,12 @@ main {
     margin-bottom:4rem;
     background-color: $c-secondary;
 
+    
+    h2 {
+        font-size:2.2rem;
+        margin-bottom:2.5rem;
+    }
+
     p {
         font-size:1.5rem;
         line-height: 1.5;
@@ -1092,19 +1124,45 @@ main {
 
 .single-news__other-items {
     width:20%;
-    border:1px dashed $c-dark;
     display:flex;
     flex-direction: column;
     margin-bottom:auto;
 
+    h2 {
+        font-family: 'Pettingill';
+        font-size:3rem;
+        padding: 2rem 2rem 0.5rem 2rem;
+    }
+
     a {
         padding:2rem;
         border-bottom: 1px dashed $c-dark;
+        border-right:1px dashed $c-dark;
         border-left:0;
         text-decoration: none;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+            background-color: darken($c-light, 10%);
+
+            p {
+                margin-left:1rem;
+            }
+        }
+
+        &:first-of-type {
+            border-top:1px dashed $c-dark;
+        }
 
         time {
             margin-bottom:0.5rem;
+            display: inline-block;
+            border-bottom:1px dashed $c-dark;
+
+            span:not(:last-child){
+                border-right:1px dashed $c-dark;
+                padding-right: 0.5rem;
+            }
         }
         
         img {
@@ -1112,12 +1170,23 @@ main {
             height:auto;
             margin-bottom: 1rem;
         }
+
+        h3 {
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom:0.5rem;
+        }
+
+        p {
+            transition: all 1s ease-in-out;
+        }
     }
 }
 
 .about-us__content {
     display: flex;
     flex-direction: column;
+    margin-bottom:4rem;
 
     p {
         font-size:1.5rem;
@@ -1162,11 +1231,12 @@ main {
 }
 
 footer {
-    padding: 2rem 0;
+    padding: 3rem 0;
     background-color: $c-dark;
     width: 100vw;
     
-    p {
+    p, a {
         color: $c-light;
+        font-size: 1.4rem;
     }
 }

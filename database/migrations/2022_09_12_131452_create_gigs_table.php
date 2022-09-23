@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('fourth_support_band')->nullable();
             $table->date('date');
             $table->string('slug');
+            $table->longText('summary');
             $table->string('tags');
             $table->string('venue');
             $table->decimal('price', 4, 2);

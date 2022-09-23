@@ -23,6 +23,7 @@ class NewsFactory extends Factory
         return [
             'title' => $title,
             'slug' => strtolower(str_replace(" ", "-", $title)),
+            'summary' => str_replace(array("\r", "\n"), '', $this->faker->sentences($nb = 2, $asText = true)),
             'body' => json_encode($this->faker->paragraphs($nb = 12, $asText = false)),
             'fake_date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
             'image_url' => 'https://picsum.photos/id/' . rand(1, 100) .  '/1600/1600',

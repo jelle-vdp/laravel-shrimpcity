@@ -1,4 +1,7 @@
 @component('layout')
+@section("meta-title", "Upcoming shows | Shrimpcity")
+@section("meta-description", "Read all about the upcoming shows in Shrimpcity.")
+
     <section class="container gigs-container">
         <h1>Upcoming gigs</h1>
         @unless (count($gigs) === 0)

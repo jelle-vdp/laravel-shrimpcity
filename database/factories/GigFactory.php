@@ -38,6 +38,7 @@ class GigFactory extends Factory
             'fourth_support_band' => null,
             'date' => $this->faker->dateTimeInInterval($startDate = 'now', $interval = '+ 365 days', $timezone = null),
             'slug' => strtolower($headlinerFirst),
+            'summary' => str_replace(array("\r", "\n"), '', $this->faker->sentences($nb = 2, $asText = true)),
             'tags' => 'Shrimp',
             'venue' => "Shrimpcity",
             'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 60),

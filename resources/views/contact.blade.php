@@ -1,14 +1,17 @@
 @component('layout')
-    <h1 class="container">Contact</h2>
+@section("meta-title", "Contact us | Shrimpcity")
+@section("meta-description", "Got a question about Shrimpcity? Feel free to send us a message and we'll respond as soon as possible")
+
+    <h1 class="container container--small">Contact</h2>
     @if (isset($message))
-        <p class="contact__message container">
+        <p class="contact__message container container--small">
             {{ $message }}
         </p>
-        <p class="contact__link container">
+        <p class="contact__link container container--small">
             <a href="/"><i class="fa-solid fa-arrow-right-long"></i> Return to the homepage</a>
         </p>
     @else
-    <form class="contact__form container" action="{{route('send.email')}}" method="POST">
+    <form class="contact__form container container--small" action="{{route('send.email')}}" method="POST">
         @csrf
         <label for="name">Name</label>
         <input type="text" name="name" id="name" placeholder="Enter your name">

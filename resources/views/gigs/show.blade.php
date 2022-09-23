@@ -1,4 +1,7 @@
 @component('layout')
+@section("meta-title", $gig['headliner_one']. " | Shrimpcity")
+@section("meta-description", $gig['summary'])
+
     <section class="single-gig">
         <div class="single-gig__bands-date-wrapper">
             <div class="container">
