@@ -27,3 +27,6 @@ Want to clone this repo and fiddle around with the code? You can do so by follow
 2. Set up a local database and adjust the 'sample.env' file (in the root folder) with your database credentials
 
 3. Rename the 'sample.env' file to '.env'
+
+4. Install the Composer dependencies by running following command<br>
+`composer install`
