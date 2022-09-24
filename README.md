@@ -22,5 +22,5 @@ A website for music venue Shrimpcity built out in Laravel
 Want to clone this repo and fiddle around with the code? You can do so by following these simple steps:
 
 1. Git clone the project in your IDE
-`https://github.com/jelle-vdp/laravel-shrimpcity.git`
+> `https://github.com/jelle-vdp/laravel-shrimpcity.git`
 
