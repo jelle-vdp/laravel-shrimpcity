@@ -1,6 +1,6 @@
 # Shrimpcity
 
-Short description: a website for concert venue Shrimpcity built out in Laravel
+A website for concert venue Shrimpcity built out in Laravel
 
 ## Why this project?
 
