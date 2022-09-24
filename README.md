@@ -24,3 +24,10 @@ Want to clone this repo and fiddle around with the code? You can do so by follow
 1. Git clone the project in your IDE
 > `https://github.com/jelle-vdp/laravel-shrimpcity.git`
 
+2. Set up a local database and adjust the 'sample.env' file (in the root folder) with your database credentials
+> `DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=shrimpcity
+DB_USERNAME=root
+DB_PASSWORD=`
