@@ -37,6 +37,6 @@ Want to clone this repo and fiddle around with the code? You can do so by follow
 `php artisan migrate:refresh --seed`
 
 7. To serve the Shrimpcity website, run this command:<br>
-´php artisan serve´
+`php artisan serve`
 
 8. Click on the link in the command line, et voila, you should be good to go
