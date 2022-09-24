@@ -1,7 +1,8 @@
-@component('layout')
+@extends('layout')
 @section("meta-title", "Contact us | Shrimpcity")
 @section("meta-description", "Got a question about Shrimpcity? Feel free to send us a message and we'll respond as soon as possible")
 
+@section('content')
     <h1 class="container container--small">Contact</h2>
     @if (isset($message))
         <p class="contact__message container container--small">
@@ -22,4 +23,4 @@
         <button type="submit">Send your message</button>
     </form>
     @endif
-@endcomponent
+@endsection

@@ -1,7 +1,8 @@
-@component('layout')
+@extends('layout')
 @section("meta-title", $news['title']. " | Shrimpcity")
 @section("meta-description", $news['summary'])
 
+@section('content')
     <div class="single-news__image" style="background-image:url({{ $news['image_url'] }})">
         <div class="container">
             <header>
@@ -37,4 +38,4 @@
             @endforeach
         </section>
     </div>
-@endcomponent
+@endsection

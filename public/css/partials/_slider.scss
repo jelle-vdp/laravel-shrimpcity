@@ -1,0 +1,132 @@
+
+.tns-outer {
+    position: relative;
+    margin-bottom:4rem;
+    overflow: auto !important;
+
+    .tns-controls {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        transform: translateY(-50%);
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            border: 1px dashed $c-dark;
+
+            &:first-child {
+                border-left:0;
+            }
+            &:last-child {
+                border-right:0;
+            }
+        }
+    }
+
+    .tns-ovh {
+        overflow: visible !important;
+        overflow-x: hidden !important;
+    }
+
+    .recent-gigs-slider {
+        
+        .recent-gigs-slider__slide {
+            aspect-ratio: 16/5;
+            height: 100%;
+            position: relative;
+            margin-bottom:4rem;
+
+            .recent-gigs-slider__image {
+                width:100%;
+                height:100%;
+                filter: contrast(0.8);
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .recent-gigs-slider__information {
+                position: absolute;
+                bottom: -4rem;
+                right: 4rem;
+                padding: 1rem;
+                background-color: $c-secondary;
+                color: $c-dark;
+                display: flex;
+                flex-direction: column;
+                z-index:9;
+                border:1px dashed $c-dark;
+
+                .recent-gigs-slider__date {
+                    position: absolute;
+                    font-weight:800;
+                    padding: 0.5rem;
+                    border:1px dashed $c-dark;
+                    border-right: 0;
+                    top: -1px;
+                    right: calc(100% + 1px);
+                    font-size:1.4rem;
+                    background-color: $c-secondary;
+                    color:$c-dark;
+                    display:flex;
+                    flex-direction: column;
+                    justify-items: center;
+
+                    > span {
+                        display: inline;
+                        text-align:center;
+
+                        &:not(:last-child){
+                            position:relative;
+                            border-bottom: 1px dashed $c-dark;
+                        }
+                    }
+                }
+            }
+
+            h3, h4, h3 span {
+                font-family: "Pettingill";
+            }
+
+            h3 {
+                font-size: 3rem;
+                margin-bottom: 0;
+                line-height: 1;
+
+                span {
+                    font-size: 1rem;
+                    margin-left:0.5rem;
+                }
+            }
+
+            h4 {
+                font-size:2rem;
+            }
+
+            .recent-gigs-slider__link {
+                font-size: 1.2rem;
+                font-weight:600;
+                margin-bottom:1rem;
+                text-decoration: none;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    margin-left:1rem;
+                }
+            }
+
+            .recent-gigs-slider__ticket-btn {
+                width:100%;
+                height:3rem;
+                background-color: $c-dark;
+                color: $c-light;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: darken($c-dark, 5%);
+                }
+            }
+        }
+    } 
+}

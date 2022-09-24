@@ -1,7 +1,8 @@
-@component('layout')
+@extends('layout')
 @section("meta-title", "News | Shrimpcity")
 @section("meta-description", "All the latest news about Shrimpcity.")
 
+@section('content')
     <h1 class="container">News</h2>
     <section class="news__wrapper container container--large">
         @foreach($news as $newsItem)
@@ -20,4 +21,4 @@
             </a>
         @endforeach
     </section>
-@endcomponent
+@endsection

@@ -65,15 +65,6 @@ button:hover {
   background-color: #679436;
 }
 
-.link {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.link:hover {
-  text-decoration: none;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +128,10 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1 {
@@ -163,10 +158,24 @@ header.nav-header .container {
 header.nav-header a {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 
-header.nav-header a:hover .logo, header.nav-header a:hover .logo span {
-  color: #d7e5f5;
+header.nav-header a img {
+  height: 60px;
+  width: auto;
+  margin-left: 1rem;
+}
+
+header.nav-header a:hover {
+  opacity: 0.8;
 }
 
 header.nav-header a .logo {
@@ -174,7 +183,7 @@ header.nav-header a .logo {
   font-size: 3rem;
   line-height: normal;
   position: relative;
-  color: #EBF2FA;
+  color: #81b944;
   margin-bottom: 2.4rem;
   display: block;
 }
@@ -184,7 +193,7 @@ header.nav-header a .logo span {
   position: absolute;
   top: 2rem;
   left: 50%;
-  color: #EBF2FA;
+  color: #81b944;
 }
 
 header.nav-header nav {
@@ -249,13 +258,6 @@ header.nav-header nav ul li a span {
 
 header.nav-header nav ul li a:hover {
   background-color: #11536c;
-}
-
-main {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .tns-outer {
@@ -660,145 +662,6 @@ main {
 }
 
 .gigs-container .gigs a article .gig__info .gig__bands .gig__support {
-  font-size: 2.5rem;
-  font-family: "Pettingill";
-}
-
-.gigs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  border: 1px dashed #0A3140;
-  margin-bottom: 2rem;
-}
-
-.gigs a {
-  color: #0A3140;
-  text-decoration: none;
-  background-color: #EBF2FA;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.gigs a:not(:last-child) {
-  border-bottom: 1px dashed #0A3140;
-}
-
-.gigs a:hover {
-  background-color: #c2d7f0;
-}
-
-.gigs a:hover article .gig__info .gig__date > span:not(:last-child)::after {
-  right: 1.5rem;
-}
-
-.gigs a:hover article img {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
-}
-
-.gigs a article {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gigs a article img {
-  max-width: 200px;
-  height: auto;
-  border-right: 1px dashed #0A3140;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.gigs a article .gig__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gigs a article .gig__info .gig__date {
-  padding: 2rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-right: 1px dashed #0A3140;
-}
-
-.gigs a article .gig__info .gig__date > span {
-  font-size: 3rem;
-  font-weight: 800;
-  display: inline;
-  margin-right: auto;
-}
-
-.gigs a article .gig__info .gig__date > span:not(:last-child) {
-  position: relative;
-}
-
-.gigs a article .gig__info .gig__date > span:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: -1rem;
-  right: -0.5rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  width: 0.5rem;
-  height: 2rem;
-  background-color: #0A3140;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.gigs a article .gig__info .gig__date .gig__month {
-  margin-left: 2rem;
-}
-
-.gigs a article .gig__info .gig__date .gig__year {
-  margin-left: 4rem;
-}
-
-.gigs a article .gig__info .gig__bands {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem;
-}
-
-.gigs a article .gig__info .gig__bands .gig__headliner {
-  font-size: 5rem;
-  line-height: 1;
-  font-family: "Pettingill";
-}
-
-.gigs a article .gig__info .gig__bands .gig__headliner span {
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-  font-family: "Pettingill";
-}
-
-.gigs a article .gig__info .gig__bands .gig__support {
   font-size: 2.5rem;
   font-family: "Pettingill";
 }
@@ -1379,10 +1242,12 @@ main {
   text-decoration: none;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  border-bottom: 0;
 }
 
 .contact__link a:hover {
   padding-left: 1rem;
+  border-bottom: 0;
 }
 
 .contact__form {
@@ -1414,4 +1279,4 @@ footer p, footer a {
   color: #EBF2FA;
   font-size: 1.4rem;
 }
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=style.css.map */

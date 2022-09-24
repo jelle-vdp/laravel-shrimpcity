@@ -1,0 +1,89 @@
+.news-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom:4rem;
+
+    h2 {
+        font-size:3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        
+        .news-recent__link {
+            border:1px dashed $c-light;
+            background-color: $c-dark;
+            display: block;
+            transition: all 1s ease-in-out;
+
+            * {
+                transition: all 1s ease-in-out;
+            }
+
+            &:hover {
+                background-color: darken($c-dark, 5%);
+
+                .news-recent__read-more {
+                    margin-left:1rem;
+                }
+
+                img {
+                    filter: grayscale(70%);
+                }
+            }
+
+            article {
+                display:flex;
+                flex-direction: column;
+                height:100%;
+
+                img {
+                    width:100%;
+                    height:auto;
+                    aspect-ratio: 1/1;
+                    border-bottom:1px dashed $c-light;
+                }
+
+                .news-recent__title-wrapper {
+                    padding:2rem 1rem;
+
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: 800;
+                        margin-bottom:0.5rem;
+                        color:$c-light;
+                    }
+    
+                    .news-recent__read-more {
+                        color:$c-light;
+    
+                        i {
+                            margin:0 0.5rem 0 0.3rem;
+                            color: $c-light;
+                        }
+                    }
+
+                }
+    
+                
+    
+                .news-recent__date {
+                    font-size: 1.4rem;
+                    margin-top: auto;
+                    border-top: 1px dashed $c-light;
+                    background-color: $c-dark;
+    
+                    span{
+                        color:$c-light;
+                        padding: 1rem;
+                        border-right:1px dashed $c-light;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

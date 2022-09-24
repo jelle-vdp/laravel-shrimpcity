@@ -6,42 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('meta-title')</title>
     <meta name="description" content="@yield('meta-description')">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo/favicon.ico') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script type="module">
-        var slider = tns({
-          container: '.recent-gigs-slider',
-          items: 1,
-          slideBy: 'page',
-          autoplay: false,
-          nav: false,
-          controlsText: ['<', '>']
-        });
-    </script>
+    @stack('extra-styles')
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header class="nav-header">
-        <div class="container">
-            <a href="/"><span class="logo">Shrimp<span>city</span></span></a>
-            <nav>
-                <ul>
-                    <li><a href="/shows"><span>Shows</span></a></li>
-                    <li><a href="/news"><span>News</span></a></li>
-                    <li><a href="/about"><span>About</span></a></li>
-                    <li><a href="/contact"><span>Contact</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    @include('partials._header')
     <main>
-    {{$slot}}
+    @yield('content')
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; {{date("Y")}} Shrimpcity | A <a href="#">Shrimptech</a> production</p>
-        </div>
-    </footer>
+    @include('partials._footer')
+
+    @stack('extra-scripts')
 </body>
 </html>

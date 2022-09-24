@@ -41,7 +41,7 @@ class GigFactory extends Factory
             'summary' => str_replace(array("\r", "\n"), '', $this->faker->sentences($nb = 2, $asText = true)),
             'tags' => 'Shrimp',
             'venue' => "Shrimpcity",
-            'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 60),
+            'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 5, $max = 60),
             'logo-url' => 'https://picsum.photos/id/' . rand(1, 200) .  '/2000/2000'
         ];
     }
