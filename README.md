@@ -16,6 +16,7 @@ A website for music venue Shrimpcity built out in Laravel
 - Add an admin part to the website to give it the full CRUD experience. Will probably do this in React. I know this doesn't really make sense projectwise but while still learning I also want to gain a deeper understanding of that framework.
 - Add more possibilities: e.g. making a show a special event like '"Shrimpcity Beach Fest' with more bands and thus also a more appropriate view
 - Deploy it to Railway.com or some other free tier service so I can link it to this Github repo
+- ...
 
 ## How to install
 
