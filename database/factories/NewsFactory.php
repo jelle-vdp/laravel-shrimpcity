@@ -19,14 +19,15 @@ class NewsFactory extends Factory
 
     public function definition()
     {
-        $title = $this->faker->sentence($nbWords = 4, $variableNbWords = true);
+        $title = substr($this->faker->sentence($nbWords = 4, $variableNbWords = true), 0, -1);
+        
         return [
             'title' => $title,
             'slug' => strtolower(str_replace(" ", "-", $title)),
             'summary' => str_replace(array("\r", "\n"), '', $this->faker->sentences($nb = 2, $asText = true)),
             'body' => json_encode($this->faker->paragraphs($nb = 12, $asText = false)),
             'fake_date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
-            'image_url' => 'https://picsum.photos/id/' . rand(1, 100) .  '/1600/1600',
+            'image_url' => 'https://picsum.photos/id/' . rand(1, 200) .  '/1600/1600',
             'gig_id' => Gig::all()->random()->id
         ];
     }

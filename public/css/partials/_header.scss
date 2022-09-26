@@ -14,37 +14,39 @@ header.nav-header {
         padding-bottom:1rem;
         display:flex;
         align-items: center;
-        transition: 1s all ease-in-out;
+        transition: 1s opacity ease-in-out;
 
-        img {
-            height:60px;
-            width:auto;
-            margin-left:1rem;
-        }
-
-        &:hover {
-            opacity:0.8;
-        }
-
-        .logo {
-            font-family: "Pettingill";
-            font-size: 3rem;
-            line-height: normal;
-            position: relative;
-            color: $c-secondary;
-            margin-bottom: 2.4rem;
-            display: block;
-            
-            span {
+        &.logo-link {
+            img {
+                height:60px;
+                width:auto;
+                margin-left:1rem;
+            }
+    
+            &:hover {
+                opacity:0.8;
+            }
+    
+            .logo {
                 font-family: "Pettingill";
-                position: absolute;
-                top: 2rem;
-                left: 50%;
+                font-size: 3rem;
+                line-height: normal;
+                position: relative;
                 color: $c-secondary;
+                margin-bottom: 2.4rem;
+                display: block;
+                
+                span {
+                    font-family: "Pettingill";
+                    position: absolute;
+                    top: 2rem;
+                    left: 50%;
+                    color: $c-secondary;
+                }
             }
         }
     }
-    
+
     nav {
         display: flex;
         align-items: center;

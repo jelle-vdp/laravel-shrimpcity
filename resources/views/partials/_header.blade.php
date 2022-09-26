@@ -1,6 +1,6 @@
 <header class="nav-header">
     <div class="container">
-        <a href="/">
+        <a class="logo-link" href="/">
             <span class="logo">Shrimp
                 <span>city</span>
             </span>

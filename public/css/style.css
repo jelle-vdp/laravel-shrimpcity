@@ -164,21 +164,21 @@ header.nav-header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 1s all ease-in-out;
-  transition: 1s all ease-in-out;
+  -webkit-transition: 1s opacity ease-in-out;
+  transition: 1s opacity ease-in-out;
 }
 
-header.nav-header a img {
+header.nav-header a.logo-link img {
   height: 60px;
   width: auto;
   margin-left: 1rem;
 }
 
-header.nav-header a:hover {
+header.nav-header a.logo-link:hover {
   opacity: 0.8;
 }
 
-header.nav-header a .logo {
+header.nav-header a.logo-link .logo {
   font-family: "Pettingill";
   font-size: 3rem;
   line-height: normal;
@@ -188,7 +188,7 @@ header.nav-header a .logo {
   display: block;
 }
 
-header.nav-header a .logo span {
+header.nav-header a.logo-link .logo span {
   font-family: "Pettingill";
   position: absolute;
   top: 2rem;
@@ -677,11 +677,15 @@ header.nav-header nav ul li a:hover {
   position: relative;
 }
 
+.single-gig__bands-date-wrapper {
+  height: calc(100vh - 8rem);
+}
+
 .single-gig__bands-date-wrapper .single-gig__image {
   position: absolute;
   top: 0;
-  left: 20vw;
-  width: 80vw;
+  left: 15vw;
+  width: 85vw;
   right: 0;
   height: calc(100vh - 8rem);
   z-index: -1;

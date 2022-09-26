@@ -5,12 +5,13 @@
     position: relative;
 
     &__bands-date-wrapper {
+        height: calc(100vh - 8rem);
 
             .single-gig__image {
                 position: absolute;
                 top:0;
-                left:20vw;
-                width:80vw;
+                left:15vw;
+                width:85vw;
                 right:0;
                 height:calc(100vh - 8rem);
                 z-index: -1;
