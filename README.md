@@ -35,7 +35,7 @@ Want to clone this repo and fiddle around with the code? You can do so by follow
 
 6. Seed your database by running this command:<br>
 `php artisan migrate:refresh --seed`<br>
--> Note: because of the way the image urls are seeded, you might have to run this command a few times to get all the images for all show & news items.
+-> note: because of the way the image urls are seeded, you might have to run this command a few times to get all the images for all show & news items.
 
 7. To serve the Shrimpcity website, run this command:<br>
 `php artisan serve`
