@@ -6,7 +6,7 @@ A website for music venue Shrimpcity built out in Laravel
 
 - Wanted to give Laravel a shot, thus far I really like it
 - To have a referral project for my upcoming internship
-- I love live music and think that the shrimp loving band Viagra Boys is great
+- Live music is great and one could argue that shrimp loving band Viagra Boys is even greater
 
 ## To do's
 
