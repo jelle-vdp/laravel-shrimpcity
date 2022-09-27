@@ -7,7 +7,7 @@ A website for fictional music venue Shrimpcity, built out in Laravel<br>
 
 - Wanted to give Laravel a shot, thus far I really like it
 - To have a referral project for my upcoming internship
-- Live music is great and one could argue that shrimp loving band Viagra Boys is even greater
+- Live music is great and one could argue that the shrimp loving band Viagra Boys is even greater
 
 ## To do's
 
@@ -26,7 +26,7 @@ Want to clone this repo and fiddle around with the code? You can do so by follow
 1. Git clone the project in your IDE by using this command:<br>
 `git clone https://github.com/jelle-vdp/laravel-shrimpcity.git`
 
-2. Set up a local database and adjust the 'sample.env' file (in the root folder) with your database credentials
+2. Set up a local database and adjust the '.env.example' file (in the root folder) with your database credentials
 
 3. To make the mail functionality on the Contact page work, also add your mail credentials in the 'sample.env' file. If you want to use, for example a gmail account, please look into [this Stack Overflow article](https://stackoverflow.com/questions/72621214/laravel-sending-email-with-gmail-after-less-secure-app-option-no-longer-suppo) 
 
