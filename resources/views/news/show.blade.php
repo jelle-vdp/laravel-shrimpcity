@@ -20,7 +20,7 @@
     <div class="single-news__body-wrapper container">
         <section class="single-news__body">
             <h2>{{ $news['summary'] }}</h2>
-            @foreach ($body as $bodyParagraph)
+            @foreach (json_decode($news['body']) as $bodyParagraph)
                 <p>{!! $bodyParagraph !!}</p>
             @endforeach
         </section>

@@ -26,9 +26,11 @@
     
             &:hover {
                 background-color: darken($c-light, 10%);
-    
-                article .show__info .show__date > span:not(:first-child)::before {
-                    left: -30px;
+
+                @media (min-width: $screen-md){
+                    article .show__info .show__date > span:not(:first-child)::before {
+                        left: -30px;
+                    }
                 }
     
                 article img {

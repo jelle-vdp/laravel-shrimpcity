@@ -633,8 +633,10 @@ header.nav-header nav ul {
 .shows-container .shows a:hover {
   background-color: #c2d7f0;
 }
-.shows-container .shows a:hover article .show__info .show__date > span:not(:first-child)::before {
-  left: -30px;
+@media (min-width: 992px) {
+  .shows-container .shows a:hover article .show__info .show__date > span:not(:first-child)::before {
+    left: -30px;
+  }
 }
 .shows-container .shows a:hover article img {
   filter: brightness(0.7);
@@ -1508,6 +1510,7 @@ header.nav-header nav ul {
     width: 3.8rem;
     display: inline-block;
     border: 1px dashed #0A3140;
+    border-right: none;
     padding: 0.5rem;
     width: 50px;
     display: flex;
@@ -1555,6 +1558,7 @@ header.nav-header nav ul {
   .single-show__description section.single-show__more-info--mobile .single-show__ticket-prices p span:last-child {
     font-size: 1rem;
     border: 1px dashed #0A3140;
+    border-left: 0;
     padding: 0.5rem;
     margin-top: auto;
   }

@@ -8,21 +8,20 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     function index () {
-        $news = News::all();
+        $news = News::all()->sortByDesc('date');
 
         return view('news.index', [
-            'news' => $news->sortByDesc('fake_date')
+            'news' => $news
         ]);
     }
 
     function show ($slug) {
         $news = News::where('slug', $slug)->firstOrFail();
-        $allNews = News::all();
+        $otherNews = News::all()->where('slug', '<>', $slug)->sortByDesc('fake_date')->take(2);
         
         return view('news.show', [
             'news' => $news,
-            'other_news' => $allNews->where('slug', '<>', $slug)->sortByDesc('fake_date')->take(2),
-            'body' => json_decode($news['body'])
+            'other_news' => $otherNews
         ]);
     }
 }

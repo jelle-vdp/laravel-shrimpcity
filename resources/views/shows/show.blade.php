@@ -52,20 +52,20 @@
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </header>
-                @foreach ($description_headliner as $description)
+                @foreach (json_decode($show['headliner_one_description']) as $description)
                     <p>{!! $description !!}</p>
                 @endforeach
             </section>
             <section>
                 <header>
-                    <h2>{{ $show['first_support_band'] }}</h2>
+                    <h2>{{ $show['support_one'] }}</h2>
                     <div class="single-show__social-media-wrapper">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </header>
-                @foreach ($description_support as $description)
+                @foreach (json_decode($show['support_one_description']) as $description)
                     <p>{!! $description !!}</p>
                 @endforeach
             </section>
@@ -75,7 +75,7 @@
                 <p class="single-show__explanation">Timetable</p>
                 <div class="single-show__timings">
                     <p class="single-show__timing"><time>19h00</time> <span><span>Doors open</span></span></p>
-                    <p class="single-show__timing"><time><span>20h00</span><span>-</span><span>20h30</span></time> <span><span>{{ $show['first_support_band'] }}</span></span></p>
+                    <p class="single-show__timing"><time><span>20h00</span><span>-</span><span>20h30</span></time> <span><span>{{ $show['support_one'] }}</span></span></p>
                     <p class="single-show__timing"><time><span>21h00</span><span>-</span><span>21h50</span></time> <span><span>{{ $show['headliner_one'] }}</span></span></p>
                 </div>
                 <p class="single-show__explanation">Tickets</p>
