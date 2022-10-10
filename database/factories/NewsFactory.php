@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Gig;
+use App\Models\Show;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,13 +22,13 @@ class NewsFactory extends Factory
         $title = substr($this->faker->sentence($nbWords = 4, $variableNbWords = true), 0, -1);
         
         return [
-            'title' => $title,
+            'title' => substr($this->faker->sentence($nbWords = 4, $variableNbWords = true), 0, -1),
             'slug' => strtolower(str_replace(" ", "-", $title)),
             'summary' => str_replace(array("\r", "\n"), '', $this->faker->sentences($nb = 2, $asText = true)),
             'body' => json_encode($this->faker->paragraphs($nb = 12, $asText = false)),
-            'fake_date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
+            'date' => $this->faker->dateTimeBetween($startDate = '-200 days', $endDate = 'now'),
             'image_url' => 'https://picsum.photos/id/' . rand(1, 200) .  '/1600/1600',
-            'gig_id' => Gig::all()->random()->id
+            'show_id' => Show::all()->random()->id
         ];
     }
 }

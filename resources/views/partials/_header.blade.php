@@ -7,6 +7,8 @@
             <img src="{{ asset('/assets/logo/logo.png') }}">
         </a>
         <nav>
+            <input type="checkbox" id="toggle-menu">
+            <label class='menu-button-container' for="toggle-menu"></label>
             <ul>
                 <li><a href="/shows"><span>Shows</span></a></li>
                 <li><a href="/news"><span>News</span></a></li>

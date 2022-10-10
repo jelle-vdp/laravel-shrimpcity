@@ -13,14 +13,16 @@
         </p>
     @else
     <form class="contact__form container container--small" action="{{route('send.email')}}" method="POST">
-        @csrf
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter your name">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" placeholder="Enter your emailadress">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
-        <button type="submit">Send your message</button>
+        <div class="contact__form-inner">
+            @csrf
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your emailadress">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <button type="submit">Send your message</button>
+        </div>
     </form>
     @endif
 @endsection

@@ -14,26 +14,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gigs', function (Blueprint $table) {
+        Schema::create('shows', function (Blueprint $table) {
             $table->id();
             $table->string('headliner_one');
-            $table->json('description_headliner_one')->nullable();
+            $table->json('headliner_one_description')->nullable();
             $table->string('headliner_one_country')->nullable();
-            $table->string('headliner_two')->nullable();
-            $table->string('headliner_three')->nullable();
-            $table->string('headliner_four')->nullable();
-            $table->string('first_support_band')->nullable();
-            $table->json('description_first_support_band')->nullable();
-            $table->string('second_support_band')->nullable();
-            $table->string('third_support_band')->nullable();
-            $table->string('fourth_support_band')->nullable();
+            $table->string('support_one')->nullable();
+            $table->json('support_one_description')->nullable();
             $table->date('date');
             $table->string('slug');
             $table->longText('summary');
-            $table->string('tags');
+            $table->json('tags');
             $table->string('venue');
             $table->decimal('price', 4, 2);
-            $table->string('logo-url')->nullable();
+            $table->string('image-url')->nullable();
             $table->timestamps();
         });
     }
@@ -45,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gigs');
+        Schema::dropIfExists('shows');
     }
 };

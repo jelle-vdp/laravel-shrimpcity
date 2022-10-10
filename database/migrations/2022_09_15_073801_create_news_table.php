@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('summary');
             $table->json('body');
-            $table->date('fake_date');
+            $table->date('date');
             $table->string('image_url')->nullable();
-            $table->foreignId('gig_id')->constrained()->nullable();
+            $table->foreignId('show_id')->constrained()->nullable();
             $table->timestamps();
         });
     }

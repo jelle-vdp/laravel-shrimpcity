@@ -18,10 +18,11 @@
     }
 }
 
-.contact__form {
+.contact__form-inner {
     display: flex;
     flex-direction: column;
     margin-bottom:4rem;
+    width: 100%;
 
     label {
         margin-bottom: 0.5rem;
@@ -30,4 +31,5 @@
     input, textarea {
         margin-bottom: 1rem;
     }
+
 }

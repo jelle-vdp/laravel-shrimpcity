@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Gig;
+use App\Models\Show;
 use App\Models\News;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(10)->create();
-        Gig::factory(21)->create();
+        Show::factory(21)->create();
         News::factory(10)->create();
 
         

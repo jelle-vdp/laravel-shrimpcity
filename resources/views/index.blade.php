@@ -7,10 +7,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script type="module">
     var slider = tns({
-      container: '.recent-gigs-slider',
+      container: '.recent-shows-slider',
       items: 1,
       slideBy: 'page',
-      autoplay: false,
+      autoplay: true,
+      speed: 1000,
+      autoplayButtonOutput: false,
       nav: false,
       controlsText: ['<', '>']
     });
@@ -19,38 +21,24 @@
 
 @push('extra-styles')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+@if($isMobile)
+    <style>
+        .news-recent__wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+    </style>
+@else
+    <style>
+        .news-recent__wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+@endif
 @endpush
 
+
 @section('content')
-    @include('partials._hero')
+    @include('partials._slider')
     @include('partials._recent-news')
-    <section class="container gigs-container">
-        <h2>Upcoming gigs</h2>
-        @unless (count($gigs) === 0)
-        <section class="gigs"> 
-            @foreach ($gigs as $gig)
-                <a class="gig__link" href="/shows/{{ $gig['slug'] }}">
-                    <article class="gig__wrapper">
-                        <div class="gig__info">
-                            <div class="gig__date">
-                                <span class="gig__day">{{ date_format(date_create($gig['date']), 'd') }}</span>
-                                <span class="gig__month">{{ date_format(date_create($gig['date']), 'm') }}</span>
-                                <span class="gig__year">{{ date_format(date_create($gig['date']), 'Y') }}</span>
-                            </div>
-                            <div class="gig__bands">
-                                <h3 class="gig__headliner">{{ $gig['headliner_one'] }}<span>({{$gig['headliner_one_country'] }})</span></h2>
-                                <h4 class="gig__support">+ {{ $gig['first_support_band'] }}</h3>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-            @endforeach
-        </section>
-
-        @else
-
-        <p>No gigs available.</p>
-            
-        @endunless
-    </section>
+    @include('partials._upcoming-shows')
 @endsection

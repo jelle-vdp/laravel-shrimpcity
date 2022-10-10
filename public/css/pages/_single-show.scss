@@ -1,77 +1,159 @@
 
-.single-gig {
+.single-show {
     display: flex;
     flex-direction: column;
     position: relative;
 
     &__bands-date-wrapper {
-        height: calc(100vh - 8rem);
 
-            .single-gig__image {
+        @media (min-width: $screen-md){
+            min-height: calc(100vh - 8rem);
+        }
+
+        @media (max-width: $screen-md){
+            position:relative;
+            min-height: 80vh;
+            margin-bottom:2rem;
+        }
+
+        .container {
+            position:initial;
+
+            .single-show__image {
                 position: absolute;
                 top:0;
-                left:15vw;
-                width:85vw;
                 right:0;
                 height:calc(100vh - 8rem);
                 z-index: -1;
-                object-fit: cover;
+                background-position: center center;
+                background-size: cover;
+
+                @media (min-width: $screen-lg) {
+                    left:15vw;
+                    max-width:85vw;
+                }
+
+                @media (max-width: $screen-lg) and (min-width: $screen-md) {
+                    left:10vw;
+                    max-width:90vw;
+                }
+
+                @media (min-width: $screen-md){
+                    width: 100%;
+                    height:calc(100vh - 8rem);
+                }
+
+                @media (max-width: $screen-md){
+                    width:100vw;
+                    height:80vh;
+                }
             }
             
-            .single-gig__bands-date-wrapper {
+            .single-show__bands-date-wrapper {
                 display: flex;
                 flex-direction: column;
+
+                @media (max-width: $screen-md){
+                    width: 100%;
+                }
 
                 > .container {
                     overflow-y: hidden;
                 }
 
-                .single-gig__bands-wrapper {
+                .single-show__bands-wrapper {
                     display:flex;
                     flex-direction: column;
                     z-index: 9;
+
+                    
+                    @media (max-width: $screen-md){
+                        position:absolute;
+                        bottom:0;
+                    }
     
-                    .single-gig__headliner {                        
+                    .single-show__headliner {                        
                         padding: 0.7rem;
                         line-height: 1;
                         font-family: "Pettingill";
-                        background-color: $c-secondary;
-                        border: 1px dashed $c-dark;
                         font-size:4rem;
                         margin: 1rem 0 1rem 0;
+
+                        @media (min-width: $screen-md){
+                            background-color: $c-secondary;
+                            border: 1px dashed $c-dark;
+                        }
+
+                        @media (max-width: $screen-md){
+                            background-color: $c-dark;
+                            color:$c-light;
+                        }
                 
                         span {
                             font-size:1.5rem;
                             margin-left:0.5rem;
                             font-family: "Pettingill";
-                            background-color: $c-secondary;
+
+                            @media (min-width: $screen-md){
+                                background-color: $c-secondary;
+                            }
+    
+                            @media (max-width: $screen-md){
+                                background-color: $c-dark;
+                                color:$c-light;
+                            }
                         }
                     }
-                    .single-gig__support {
+                    .single-show__support {
                         padding:0.7rem;
                         font-size:2rem;
                         font-family: "Pettingill";
                         margin-bottom:1rem;
-                        background-color: $c-secondary;
                         margin-right: auto;
                         border: 1px dashed $c-dark;
+
+                        @media (min-width: $screen-md){
+                            border: 1px dashed $c-dark;
+                            background-color: $c-secondary;
+                        }
+
+                        @media (max-width: $screen-md){
+                            background-color: $c-dark;
+                            color:$c-light;
+                        }
                     }
                 }
-                .single-gig__info-button-wrapper {
+                .single-show__info-button-wrapper {
                     margin-right:auto;
-                    .single-gig__extra-info-wrapper {
+
+                    .single-show__extra-info-wrapper {
                         display: flex;
                         flex-direction: column;
-                        background-color: $c-dark;
-                        padding: 1.5rem;                        z-index: 9;
-                        border: 1px dashed $c-light;
+                        background-color: $c-dark;                
+                        z-index: 9;
 
-                        .single-gig__explanation {
+                        @media (min-width: $screen-md){
+                            border: 1px dashed $c-light;
+                            padding: 1.5rem;             
+                        }
+
+                        @media (max-width: $screen-md){
+                            padding: 1rem;
+                            position: absolute;
+                            left:0;
+                            top: 1rem;
+                        }
+
+                        .single-show__explanation {
                             font-size: 1.2rem;
                             font-family: "Pettingill";
                             color: $c-light;
                             margin: 0 auto 0 2rem;
                             position: relative;
+
+                            @media (max-width: $screen-md){
+                                display: none;
+                            }
 
                             &::before, &::after {
                                 content: ". . . . .";
@@ -86,11 +168,13 @@
                                 right: -2rem;
                             }
                         }
-                    
 
-                        .single-gig__date {
+                        .single-show__date {
                             display: flex;
-                            margin-bottom:1.5rem;
+
+                            @media (min-width: $screen-md){
+                                margin-bottom:1.5rem;
+                            }
                 
                             > span {
                                 font-size:2.4rem;
@@ -117,27 +201,37 @@
                                     
                                 }
                 
-                                .gig__month {
+                                .show__month {
                                     margin-left:2rem;
                                 }
                 
-                                .gig__year {
+                                .show__year {
                                     margin-left:4rem;
                                 }
                             }
                         }
 
-                        .single-gig__venue {
+                        .single-show__venue {
                             font-size:2.4rem;
                             font-weight: 800;
                             color: $c-light;
                             line-height: 1;
                             margin-bottom:2rem;
+
+                            @media (max-width: $screen-md){
+                                display: none;
+                            }
                         }
-                        .single-gig__timings {
+
+                        .single-show__timings {
+                            
                             margin-bottom:1.5rem;
 
-                            .single-gig__timing {
+                            @media (max-width: $screen-md){
+                                display: none;
+                            }
+
+                            .single-show__timing {
 
                                 span:first-child {
                                     font-size:1rem;
@@ -152,25 +246,21 @@
                                     font-weight: 800;
                                     color: $c-light;
                                 }
-                        }
-                        
-
-                            // &:not(.single-gig__timings--doors) span:last-child {
-                            //     font-size:2rem;
-                            //     font-family: "Pettingill";
-                            //     color: $c-light;
-                            // }
-                            
+                            } 
                         }
 
-                        .single-gig__ticket-prices {
+                        .single-show__ticket-prices {
+
+                            @media (max-width: $screen-md){
+                                display: none;
+                            }
 
                             > p {
                                 color: $c-light;
                                 font-size: 1.6rem;
                                 font-weight: 800;
                                 
-                                .single-gig__ticket-type {
+                                .single-show__ticket-type {
                                     font-size:0.8rem;
                                     font-weight: 500;
                                     color: $c-light;
@@ -180,22 +270,52 @@
                         }
                     }
 
-                    .single-gig__ticket-button-wrapper {
+                    .single-show__ticket-button-wrapper {
                         
                         border: 1px dashed $c-dark;
                         border-top:0;
-                        width:100%;
+
+                        
+                        @media (min-width: $screen-md){
+                            border-top:0;
+                        }
+
+                        @media (max-width: $screen-md){
+                            width:auto;
+                            position:absolute;
+                            top:100%;
+                        }
 
                         button {
-                            width:100%;
-                            height:3rem;
+
+                            i, span {
+                               color: currentColor;
+                            }
+
+                            @media (min-width: $screen-md){
+                                width:100%;
+                                height:3rem;
+                            }
+
+                            @media (max-width: $screen-md){
+                                width: 100%;
+                                display:flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 1rem 0.6rem;
+                                gap: 0.6rem;
+
+                                span {
+                                    margin-top:2px;
+                                }
+                            }
+
                         }
                     }
                 }
             }
         }
-    
-    
+    }
 
     &__description {
         display:flex;
@@ -208,26 +328,55 @@
                 margin-bottom: 4rem;
             }
 
+            @media (max-width: $screen-md){
+                &:nth-last-child(2){
+                    margin-bottom: 2rem;
+                }
+            }
+
             header {
                 display:flex;
                 margin-bottom: 1rem;
-                border-bottom: 5px solid $c-dark;
+
+                @media (min-width: $screen-sm){
+                    border-bottom: 5px solid $c-dark;
+                }
+
+                @media (max-width: $screen-sm){
+                    flex-direction: column;
+                }
 
                 h2 {
                     font-size: 3rem;
                     font-family: "Pettingill";
                     padding-right:2rem;
+                    line-height: 1;
+    
+                    @media (max-width: $screen-sm){
+                        border-bottom: 5px solid $c-dark;
+                        padding-bottom: 1rem;
+                        margin-bottom: 1rem;
+                    }
+    
                 }
 
-                .single-gig__social-media-wrapper {
-                    border-left: 5px solid $c-dark;
-                    font-size:2rem;
-                    padding-left: 2rem;
+                .single-show__social-media-wrapper {
                     display: flex;
                     align-items: center;
+                    font-size: 2rem;
+
+                    @media (min-width: $screen-sm){
+                        margin-left: auto;
+                        border-left: 5px solid $c-dark;
+                        padding-left: 2rem;
+                    }
+
+                    @media (max-width: $screen-sm){
+                        
+                    }
 
                     a:not(:last-child) {
-                        margin-right: 1rem;
+                        margin-right:1rem;    
                     }
 
                     a:hover {
@@ -239,11 +388,130 @@
             }
 
             p {
-                font-size:1.5rem;
-                line-height: 1.5;
+                font-size:1.4rem;
     
                 &:not(:last-child) {
                     margin-bottom:1rem;
+                }
+            }
+
+            &.single-show__more-info--mobile {
+                display: none;
+
+                @media (max-width: $screen-md){
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 2rem;
+                    border-top: 1px dashed $c-dark;	
+                    margin-top: 4rem;
+
+                    .single-show__explanation {
+                        padding: 0.5rem;
+                        margin-right:auto;
+                        background-color: $c-secondary;
+                        font-size:1rem;
+                        margin-bottom:0;
+                    }
+
+                    .single-show__venue {
+                        padding: 0.8rem 0.5rem;
+                        margin-right:auto;
+                        background-color: $c-dark;
+                        color: $c-light;
+                        font-size:1.6rem;
+                        margin-bottom:2rem;
+                    }
+
+                    .single-show__timings {
+                        margin-bottom:2rem;
+
+                        .single-show__timing {
+                            display:flex;
+
+                            &:not(:last-child){
+                                margin-bottom:0.4rem;
+                            }
+
+                            > time {
+                                font-size:1rem;
+                                font-weight: 500;
+                                width: 3.8rem;
+                                display: inline-block;
+                                border: 1px dashed $c-dark;
+                                padding: 0.5rem;
+                                width: 50px;
+                                display:flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+    
+                            > span:last-child {
+                                font-weight: 800;
+                                padding: 0.5rem 0.8rem;
+                                background-color: $c-dark;
+                                display: flex;
+                                align-items: center;
+
+                                span {
+                                    color: $c-light;
+                                }
+                            }
+
+                            &:not(:first-child){
+                                > span:last-child {
+                                    font-size:2.4rem;
+                                }
+                            }
+
+                            &:first-child {
+                                > span:last-child {
+                                    font-size:1.2rem;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .single-show__ticket-prices {
+                        margin-right: 0.5rem;
+                        font-weight: 800;
+                        margin-bottom: 1rem;
+
+                        p {
+                            font-size:3rem;
+                            font-weight: 800;
+                            margin-bottom: 0;
+                            line-height:1.2;
+                            margin-right:auto;
+                            display:flex;
+
+                            &:not(:last-child){
+                                margin-bottom:0.4rem;
+                            }
+
+                            span {
+
+                                &:first-child {            
+                                    background-color: $c-dark;
+                                    color: $c-light;
+                                    padding: 0.5rem 0.8rem;
+                                }
+
+                                &:last-child { 
+                                    font-size:1rem;
+                                    border: 1px dashed $c-dark;
+                                    padding: 0.5rem;
+                                    margin-top:auto;
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        padding: 1rem 2rem;
+                        width:100%;
+                    }
                 }
             }
         }
@@ -251,3 +519,4 @@
         
     }
 }
+

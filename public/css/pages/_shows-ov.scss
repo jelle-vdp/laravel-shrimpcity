@@ -1,0 +1,272 @@
+.shows-ov {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom:4rem;
+    }
+
+    .shows {
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        padding: 1rem 0;
+        border-top: 1px dashed $c-dark;
+        border-bottom: 1px dashed $c-dark;
+
+        .show__link {
+            text-decoration: none;
+            
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom:1px dashed $c-dark;
+            }
+
+            &:hover {
+                .show__bands {
+                    padding-left:3rem;
+                }
+            }
+
+            article {
+                display:flex;
+                gap: 1rem;
+
+                img {
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+
+                    @media (min-width: $screen-md) {
+                        width:calc(20% - 0.5rem);
+                    }
+                    @media (max-width: $screen-md) {
+                        display:none;
+                    }
+                }
+
+                .show__info {
+                    display:flex;
+                    gap: 1rem;
+
+                    @media (min-width: $screen-md) {
+                        width:calc(80% - 0.5rem);
+                    }
+                    @media (max-width: $screen-md) {
+                        width: 100%;
+                    }
+
+                    @media (max-width: $screen-sm){
+                        flex-direction: column;
+                    }
+
+                    &-left {
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        
+                        @media (min-width: $screen-md) {
+                            width:calc(80% - 0.5rem);
+                        }
+                        @media (max-width: $screen-md) and (min-width: $screen-sm) {
+                            width:calc(70% - 0.5rem);
+                        }
+
+                        &-top {
+                            display:flex;
+
+                            time {
+                                font-size:1.4rem;
+                                background-color: $c-dark;
+                                font-weight:800;
+
+                                @media (min-width: $screen-xs){
+                                    padding: 0.5rem 0.8rem;
+                                }
+
+                                @media (max-width: $screen-xs){
+                                    padding: 0.3rem 0.6rem;
+                                }
+
+                                span {
+                                    color: $c-light;
+
+                                    &:not(:last-child){
+                                        position: relative;
+                                        padding-right: 1.4rem;
+
+                                        &::after {
+                                            content: "";
+                                            position: absolute;
+                                            right: 0;
+                                            top:0.4rem;
+                                            width:1rem;
+                                            height:0.2rem;
+                                            background-color: $c-light;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .show__venue {
+                                background-color: $c-secondary;
+                                margin-right:auto;
+                                margin-bottom:auto;
+                                display: flex;
+
+                                @media (min-width: $screen-xs){
+                                    padding: 0.5rem 0.8rem;
+                                }
+
+                                @media (max-width: $screen-xs){
+                                    padding: 0.3rem 0.6rem;
+                                }
+                                
+                                &-prefix {
+                                    font-size:0.8rem;
+                                    margin-bottom: auto;
+                                    margin-right:0.6rem;
+                                    position:relative;
+
+                                    @media (max-width: $screen-xs){
+                                        display:none;
+                                    }
+
+                                    &::after {
+                                        content: "/";
+                                        position: absolute;
+                                        top: 0.2rem;
+                                        right: -0.4rem;
+                                    }
+                                }
+
+                                span:last-child {
+                                    font-size:1rem;
+                                    font-weight:800;
+                                }
+                            }
+                        }
+
+                        .show__bands {
+                            transition: all 0.5s ease-in-out;
+
+                            @media (min-width: $screen-sm){
+                                margin:2rem 0;
+                            }
+
+                            @media (max-width: $screen-sm){
+                                margin:2rem 0 1rem 0;
+                            }
+
+                            .show__headliner {
+                                font-family: "Pettingill";
+                                line-height: 1;
+                                margin-bottom:0.5rem;
+                                
+                                @media (min-width:$screen-md) {
+                                    font-size:5rem;
+                                }
+    
+                                @media (max-width:$screen-md) and (min-width:$screen-sm) {
+                                    font-size:4.5rem;
+                                }
+    
+                                @media (max-width:$screen-sm) and (min-width:$screen-xs) {
+                                    font-size:4.2rem;
+                                }
+    
+                                @media (max-width:$screen-xs) {
+                                    font-size:3.8rem;
+                                }
+            
+                                span {
+                                    margin-left:0.5rem;
+                                    font-family: "Pettingill";
+                                    font-size:1.5rem;
+                                }
+                            }
+    
+                            .show__support {
+                                font-family: "Pettingill";
+                                line-height: 1;
+                                font-size:2rem;
+                                margin-left:1rem;
+                            }
+                        }
+
+                        .show__tags {
+                            display:flex;
+                            align-items: center;
+                            font-weight:500;
+
+                            @media (max-width: $screen-sm){
+                                display:none;
+                            }
+
+                            span:first-child {
+                                font-size:0.8rem;
+                                margin-right:0.5rem;
+                            }
+
+                            &-item {
+                                text-transform: capitalize;
+                                font-size:1.3rem;
+                                font-weight:700;
+
+                                &:hover {
+                                    color: lighten($c-dark, 20%);
+
+                                    &::after {
+                                        color: $c-dark;
+                                    }
+                                }
+
+                                &:not(:last-child) {
+                                    position: relative;
+                                    margin-right: 1rem;
+
+                                    &::after {
+                                        position: absolute;
+                                        font-size:0.8rem;
+                                        bottom:0.2rem;
+                                        right:-0.6rem;
+                                        content: '/';
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-right {
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+
+                        
+                        @media (min-width: $screen-md) {
+                            width:calc(20% - 0.5rem);
+                        }
+                        @media (max-width: $screen-md) and (min-width: $screen-sm) {
+                            width:calc(30% - 0.5rem);
+                        }
+
+                        @media (max-width: $screen-sm){
+                            display: none;
+                        }
+
+                        .show__price {
+                            font-size:2rem;
+                            font-weight: 800;
+                            margin-bottom:1rem;
+
+                            span {
+                                margin-left:0.2rem;
+                                font-size:0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
