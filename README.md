@@ -7,12 +7,12 @@ A website for fictional music venue Shrimpcity, built out in Laravel<br>
 
 - Wanted to give Laravel a shot, thus far I really like it
 - To have a referral project for my upcoming internship
-- Live music is great and one could argue that the shrimp loving band Viagra Boys is even greater
+- Music venues are awesome, yet they don't often cater to the needs of shrimps
 
 ## To do's
 
 - Automaticly remove events after they took place, maybe move them to some kind of archive page
-- Make the website responsive
+- Add srcsets and sizes to the <img>-tags
 - Add more strict typing
 - Add an admin part to the website to give it the full CRUD experience. Will probably do this in React. I know this doesn't really make sense projectwise but while still learning I also want to gain a deeper understanding of that framework.
 - Add more possibilities: e.g. making a show a special event like '"Shrimpcity Beach Fest' with more bands and thus also a more appropriate view
