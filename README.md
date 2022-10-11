@@ -13,6 +13,7 @@ A website for fictional music venue Shrimpcity, built out in Laravel.<br>
 
 - Automaticly remove events after they took place, maybe move them to some kind of archive page
 - Add srcsets and sizes to the img-tags
+- Add filter/search functionalty for shows
 - Add more strict typing
 - Add an admin part to the website to give it the full CRUD experience. Will probably do this in Vue. I know this doesn't really make sense projectwise but while still learning I also want to gain a deeper understanding of that framework.
 - Add more possibilities: more bands, 'special' events such as festivals with a specific view,...
