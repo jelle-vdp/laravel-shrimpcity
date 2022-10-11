@@ -22,7 +22,7 @@ class ShowFactory extends Factory
         $descriptionHeadliner = $this->faker->paragraphs($nb = 6, $asText = false);
         $descriptionSupport = $this->faker->paragraphs($nb = 4, $asText = false);
         $tags = [];
-        for ($i = 0; $i < rand(0, 2); $i++) {
+        for ($i = 0; $i < rand(1, 3); $i++) {
             $tags[$i] = $this->faker->word();
         };
         $venue = ['Shrimpcity Beach', 'The Shrimp Bar', 'The Shrimpquee'][rand(0, 2)];
