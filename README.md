@@ -1,7 +1,6 @@
 # Shrimpcity
 
-A website for fictional music venue Shrimpcity, built out in Laravel.<br>
-[Live preview](https://shrimpcity.online/) (might not always be 100% up to sync with this repo)
+A website for fictional music venue Shrimpcity, built out in Laravel.
 
 ## Why this project?
 
